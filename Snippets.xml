@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<snippets>
+	<section name="Nuget Overview">
+		<snippet name="Help - Nuget">
+			<![CDATA[
+get-help nuget
+			]]>
+		</snippet>
+		<snippet name="Help - Get-Package">
+			<![CDATA[
+get-help Get-Package
+			]]>
+		</snippet>
+		<snippet name="Help - Get-Package Examples">
+			<![CDATA[
+get-help Get-Package -examples
+			]]>
+		</snippet>
+		<snippet name="Help - Get-Package Detailed">
+			<![CDATA[
+get-help Get-Package -detailed
+			]]>
+		</snippet>
+		<snippet name="List Available">
+			<![CDATA[		
+Get-Package -ListAvailable -Filter Common*Log4net*
+			]]>
+		</snippet>
+		<snippet name="WhatIf">
+			<![CDATA[
+Install-Package -Version 2.1.0 Common.Logging.Log4Net1211 -WhatIf
+			]]>
+		</snippet>
+		<snippet name="Common.Logging.Log4Net Prev Version">
+			<![CDATA[
+Install-Package -Version 2.1.0 Common.Logging.Log4Net1211
+			]]>
+		</snippet>
+		<snippet name="Show Installed Packages">
+			<![CDATA[
+Get-Packages			
+			]]>
+		</snippet>
+		<snippet name="Available Package Updates">
+			<![CDATA[
+Get-Packages -updates			
+			]]>
+		</snippet>
+				<snippet name="Update Common Logging">
+			<![CDATA[
+Update-Package Common.Logging.Log4Net1211			
+			]]>
+		</snippet>
+
+		<snippet name="Logging Code">
+			<![CDATA[
+			using Common.Logging;
+			using Common.Logging.Simple;
+
+
+			LogManager.Adapter = new ConsoleOutLoggerFactoryAdapter();
+
+			ILog log = LogManager.GetCurrentClassLogger();
+
+			log.Debug("some Debug Log Output");
+
+			Console.WriteLine("Press Enter to Exit...");
+			Console.ReadLine();
+			]]>
+		</snippet>
+		<snippet name="Update Previous Version">
+			<![CDATA[
+Update-Package -Version 2.1.0 Common.Logging.Log4net1211			
+			]]>
+		</snippet>
+		<snippet name="">
+			<![CDATA[
+			
+			]]>
+		</snippet>
+	</section>
+	
+	
+	
+	
+	<section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section><section name="Nuget Demo 2">
+		<snippet name="Demo 2 1st">
+			<![CDATA[
+				demo 2 test
+			]]>
+		</snippet>
+	</section>
+	<section name="Nuget Demo 1">
+		<snippet name="Test Prop">
+			<![CDATA[
+				public string text = "testing";
+			]]>
+		</snippet>
+		<snippet name="Test Class">
+			<![CDATA[
+				public class Test
+				{
+					public string T1 {get;set;}
+				}
+			]]>
+		</snippet>
+	</section>
+</snippets>

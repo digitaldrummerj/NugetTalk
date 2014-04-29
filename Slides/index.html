@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Chocolatey Essentials</title>
+
+		<meta name="description" content="A windows package manager.  Better way to install software">
+		<meta name="author" content="Justin James">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section data-id="9a9475c6194bee23224c14689e90892c">
+        <h2>Chocolatey Overview</h2>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>how to make your life easier&nbsp;</div>
+<div>installing software on a windows machine</div>
+<div>
+<br>
+</div>
+<div>
+<div style="font-size: 30.21148109436035px; font-variant: normal;">
+    <br>
+</div>
+</div>
+<div>
+    <h3 style="font-style: normal; font-variant: normal;  text-align: right;">
+            <br>
+</h3>
+<h3 style="font-style: normal; font-variant: normal;  text-align: right;">
+<span style="font-size: 39.525px; font-weight: bold;">Justin James</span>
+            <br>
+</h3>
+    <div style="text-align: right;">
+        <span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal; text-align: center;">
+            <br>
+        </span>
+        </div>
+<div style="text-align: right;">
+<span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal; text-align: center;">Blog: digitaldrummerj.azurewebsites.net</span>
+        <br>
+</div>
+    <div style="font-size: 30px; font-style: normal; font-variant: normal;  text-align: right;">Email:&nbsp;digitaldrummerj at gmail.com</div>
+    <div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: right;">
+        <span style="text-align: center;">Twitter: @digitaldrummerj</span>
+    </div>
+<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: right;">
+        <br>
+    </div>
+</div>
+
+</section>
+    <section data-id="b714341c2cf3c07726d8f01735ce955e">
+        <h2>Installing software on Windows</h2>
+<div>
+        <br>
+</div>
+<div>
+    <br>
+</div>
+<div>
+<ul>
+<li>
+<span style="text-align: center;">Multiple clicks to get to anywhere</span>
+</li>
+<li>
+<span style="text-align: center;">Deja Vu - sense of installing same software on multiple machines</span>
+</li>
+<li>
+<span style="text-align: center;">aargh! I should have downloaded the 32 bit version.</span>
+</li>
+<li>
+<span style="text-align: center;">Don't install it on a directory with space in the name</span>
+</li>
+<li>
+<span style="text-align: center;">etc</span>
+</li>
+<li>
+<span style="text-align: center;">etc</span>
+</li>
+<li>
+<span style="text-align: center;">etc</span>
+</li>
+</ul>
+</div>
+</section>
+        <section data-id="8985f156abfad422c90a973c8e190dd0">
+            <h2>Chocolatey to the rescue</h2>
+<div>
+    <br>
+</div>
+<div>Essentially apt-get for windows</div>
+<div>
+            <br>
+        </div>
+<div>Uses nuget to package up the installs</div>
+<div>
+        <br>
+    </div>
+<div>Uses powershell to do the install</div>
+<div>
+    <br>
+</div>
+<div>Lots of built in helpers&nbsp;</div>
+<div>
+<br>
+</div>
+<div>
+<span>But at the end of the day it is powershell, &nbsp;so you can do nearly anything during the install</span>
+</div>
+</section>
+<section data-id="dbae8eab8eba7253bbb0ce179bd76d9d">
+    <h2>So what is nuget?</h2>
+<div>
+    <br>
+</div>
+<div>Nuget started out as a package manager for the Visual Studio dev environment.</div>
+<div>
+<br>
+</div>
+<div>It is an easy way to package up code, dll's, configs, etc and distribute them.&nbsp;</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>Instead of re-inventing the wheel, Chocolatey uses nuget to do:&nbsp;</div>
+<div>- packaging&nbsp;</div>
+<div>- dependency management</div>
+<div>- versioning</div>
+<div>- hosting feeds/gallery</div>
+<div>&nbsp;</div>
+</section>
+<section data-id="907c61de671f36454e8d064882ee509f">
+    <h2>What can I install?</h2>
+<div>
+    <br>
+</div>
+<div>clist (chocolatey list) [Search Term]</div>
+<div>
+<br>
+</div>
+<div>
+<a href="http://www.chocolatey.org/">Chocolatey.org</a>
+</div>
+<div>
+<a href="http://www.nuget.org/">Nuget.org</a>
+</div>
+<div>Web Platform Installer (WebPI)
+</div>
+<div>Ruby Gems</div>
+<div>Cygwin</div>
+<div>Python</div>
+<div>Windows Features</div>
+<div>Windows Update (using <a href="http://boxstarter.org/">BoxStarter</a>)</div>
+<div>File Share</div>
+<div>
+<span>
+    <br>
+</span>
+</div>
+<div>
+<span>any other place you can have a nuget source</span>
+</div>
+</section>
+<section data-id="e66f94ddaa2a1d6655f5d1eb45844be4">
+    <h2>So how do I get &nbsp;Chocolatey?</h2>
+<div>
+    <br>
+</div>
+<div>Run the command below&nbsp;</div>
+<div>or&nbsp;</div>
+<div>Go to <a href="http://www.chocolatey.org/">chocolatey.org</a>&nbsp;and copy the command from the home page</div>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+    <font style="font-size: 24px;">
+<span style="font-style: normal; font-variant: normal; text-align: start;">@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET PATH=%PATH%;%systemdrive%\chocolatey\bin</span>
+    </font>
+<br>
+</div>
+<div>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+</section>
+<section data-id="f943a26ca800f31db762b002d6951b1e">
+    <h2>How do I install an Application?</h2>
+<div>
+        <br>
+</div>
+<div>from the command line:</div>
+<div>
+    <br>
+</div>
+<div>cinst [package name]
+</div>
+<div>
+<br>
+</div>
+<div>example:&nbsp;</div>
+<div>cinst notepadplusplus</div>
+<div>
+<br>
+</div>
+<div>this will download the installer and run it silently</div>
+</section>
+<section data-id="88c0edcfe3a15cc34c28ec96045415f8">
+    <h2>What is the package doing?</h2>
+<div>
+    <span>Runs the chocolatelyInstall.ps1 script&nbsp;</span>
+</div>
+<div>
+<span>
+    <br>
+</span>
+</div>
+<div>
+<br>
+</div>
+<div>
+<span>Easiest way to review script is to install Nuget Package Explorer</span>
+<br>
+</div>
+<div>
+<span>cinst NugetPackageExplorer</span>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<span>Then you can open the package in Nuget Package Explorer&nbsp;</span>
+</div>
+<div>
+<span>
+    <br>
+</span>
+</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">&nbsp;You should review the chocolateyInstall.ps1 before installing any packages.</span>
+<span>
+    <br>
+</span>
+</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+    <br>
+</span>
+</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">You can also view all of the chocolately code in c:\chocolatey</span>
+</div>
+</section>
+<section data-id="d088da524460a608954fe2456b149203">
+    <h2>Update application to latest version?</h2>
+<div>
+    <br>
+</div>
+<div>
+    There are 2 ways to do update an install to the latest
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>1: &nbsp;Update one package at a time</div>
+<div>cup [package name]</div>
+<div>
+<br>
+</div>
+<div>2: &nbsp;Update all installed packages</div>
+<div>cup all</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="1135d3f4a289afc29ca2614cd6215953">
+    <h2>How do I uninstall a package?</h2>
+<div>The package needs to provide a chocolateyUninstall.ps1&nbsp;
+</div>
+<div>
+<br>
+</div>
+<div>
+Unfortunately, in many cases this is not provided
+
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>chocolatey uninstall [package name]</div>
+<div>
+<br>
+</div>
+<div>or&nbsp;</div>
+<div>
+<br>
+</div>
+<div>cuninst [package name]</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+
+</section>
+    <section data-id="4b88ba212c601809776a73240f078c82">
+        <h2>Creating a Package</h2>
+<div>Every package includes 3 main components:
+</div>
+<div>NuSpec</div>
+<div>chocolateyInstall.ps1</div>
+<div>any application files to include</div>
+<div>
+        <br>
+    </div>
+<div>
+    <b>
+    <br>
+</b>
+</div>
+<div>
+<b>Basic Steps:</b>
+</div>
+<div>
+<ol>
+<li>
+<span style="text-align: center;">Create your directory structure and ps1 files</span>
+</li>
+<li>
+<span style="text-align: center;">cinst nuget.commandline</span>
+</li>
+<li>
+<span style="text-align: center;">run nuget spec against directory&nbsp;</span>
+</li>
+<li>
+<span style="text-align: center;">fill out details in the nuspec file</span>
+</li>
+<li>
+<span style="text-align: center;">run nuget pack [nuspec file] to create package</span>
+</li>
+</ol>
+</div>
+</section>
+<section data-id="ed77e22b9208f50941dcfe1aef718009">
+    <h2>Built-In Helpers</h2>
+<div>
+    <br>
+</div>
+<div>
+<table>
+    <tbody>
+<tr>
+<td>
+<p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyPackage</font>
+</p>
+</td>
+      <td>
+<p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyVsixPackage</font>
+</p>
+</td>
+    </tr>
+<tr>
+<td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyZipPackage</font>
+</p>
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyPowershellCommand</font>
+</p>            
+        </td>        
+    </tr>
+<tr>
+<td>
+              <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Get-ChocolateyWebFile</font>
+</p>          
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Get-ChocolateyUnzip</font>
+</p>
+        </td>
+        
+    </tr>
+<tr>
+<td>
+             <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyPinnedTaskBarItem</font>
+</p>           
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<span>
+    <font style="font-size: 18px;">Install-ChocolateyDesktopLink</font>
+</span>
+</p>
+        </td>        
+    </tr>
+<tr>
+<td>
+                 <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Start-ChocolateyProcessAsAdmin</font>
+</p>
+           
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyInstallPackage</font>
+</p>
+        </td>
+        
+    </tr>
+<tr>
+<td>
+              <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyPath</font>
+</p>          
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyEnvironmentVariable</font>
+</p>
+        </td>
+        
+    </tr>
+<tr>
+<td>
+              <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyExplorerMenuItem</font>
+</p>          
+        </td>
+        <td>
+            <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Install-ChocolateyFileAssociation</font>
+</p>
+        </td>
+        
+    </tr>
+<tr>
+<td>
+              <p style="font-style: normal; font-variant: normal;">
+<font style="font-size: 18px;">Update-SessionEnvironment</font>
+</p>
+              
+        </td>
+        <td>
+            
+        </td>
+        
+    </tr>
+</tbody>
+</table>
+</div>
+<div>
+<a href="https://github.com/chocolatey/chocolatey/wiki/HelpersReference">https://github.com/chocolatey/chocolatey/wiki/HelpersReference</a>
+</div>
+
+
+
+</section>
+<section data-id="7f8642cb981bcd80a0476654c9b832f5">
+    <h2>Windows Features</h2>
+<div>Installs Windows Features via the Deployment Image Servicing and Management tool on the local machine.&nbsp;<br>
+</div>
+<div>
+    <br>
+    </div>
+<div>
+<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">cinst [product name] -source windowsfeatures</span>
+    <br>
+</div>
+<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+    <br>
+</div>
+<div style="font-size: 30px; font-style: normal; font-variant: normal;">command to get list of available installs:</div>
+<div style="font-size: 30px; font-style: normal; font-variant: normal;">clist -source windowsfeatures</div>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="f482610a77f364ff257dd00d1365c716">
+    <h2>Web Platform Installer&nbsp;</h2>
+<div>
+    <span style="font-size: 30px; font-style: normal; font-variant: normal;">Install products from the Web Platform Installer (webpi)</span>
+</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+    <br>
+</span>
+</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">cinst [product name] -source webpi</span>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>command to get list of available installs:</div>
+<div>
+<span>clist -source webpi</span>
+</div>
+<div>
+<br>
+</div>
+<div>
+<span>PreRequisite:&nbsp;</span>
+<br>
+</div>
+<div>cinst webpicommandline</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="d42d8781b448032f51eab432cd8ff1d8">
+    <h2>BoxStarter</h2>
+<div>
+<a href="http://boxstarter.org/" style="font-size: 30px; font-style: normal; font-variant: normal;">http://boxstarter.org</a>
+    <br>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+    </div>
+<div>
+<span>built on top of chocolatey</span>
+    <br>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+    </div>
+<div>
+<span>provides reboot resiliency &amp; remote</span>
+    <span>&nbsp;installations</span>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+    </div>
+<div>
+<span>integrates with Hyper-V and Azure VMs</span>
+    <br>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+    </div>
+<div>
+<span>allow install of Windows Updates</span>
+    <br>
+</div>
+<div>
+    <span>
+        <br>
+    </span>
+</div>
+<div>
+<span>Set options for taskbar, remote desktop, &amp; explorer</span>
+</div>
+<div>
+<span>
+    <br>
+</span>
+</div>
+<div>
+<span>better way to install multiple packages that require reboot</span>
+<br>
+</div>
+</section>
+<section data-id="10120061e081e81c5434e5d2608f38c7">
+    <h2>Automatic Packages</h2>
+<div>
+    <br>
+</div>
+<div>Accomplished with package chocopkgup</div>
+<div>
+<br>
+</div>
+<div>
+<span>Free for publicly available packages (i.e. chocolatey gallery)</span>
+<br>
+</div>
+<div>
+<span>
+    <br>
+</span>
+</div>
+<div>Have to pay $$ if used for private packages</div>
+<div>
+<br>
+</div>
+<div>Details:</div>
+<div>&nbsp;<a href="https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages">https://github.com/chocolatey/chocolatey/wiki/AutomaticPackages</a>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="a726d01ae8e6855bd86bad67be84e566">
+    <h2>Modify Available Nuget Sources</h2>
+<div>Very easy to add/remove/disable sources</div>
+<div>
+    <br>
+</div>
+<div>Get Sources -&gt; choco sources list</div>
+<div>
+<br>
+</div>
+<div>Add Source -&gt; choco add -name "" -source ""</div>
+<div>
+<br>
+</div>
+<div>Update Source -&gt; remove and re-add with new details</div>
+<div>
+<br>
+</div>
+<div>Disable -&gt; choco sources disable &nbsp;"name"&nbsp;</div>
+<div>
+<br>
+</div>
+<div>
+<span style="font-size: 29.809629440307617px; font-style: normal; font-variant: normal;">Enable -&gt; choco sources enable &nbsp;"name"&nbsp;</span>
+</div>
+</section>
+<section data-id="0feae9fe7a2946ed2e441b8163d1ae14">
+    <h2>Hosting Your Own Nuget Feed</h2>
+<div>
+<br>
+</div>
+<div>Local Feed: point at a folder on your system</div>
+<div>
+<br>
+</div>
+<div>Remote Feeds: &nbsp;You can host a remote feed on a server that runs IIS.</div>
+<div>- use Nuget.Server package</div>
+<div>
+<br>
+</div>
+<div>Can also host nuget gallery locally</div>
+<div>
+<ul>
+<li>
+<a href="https://github.com/NuGet/NuGetGallery/blob/master/README.markdown">Setting up a Local Gallery</a>
+</li>
+<li>
+<a href="http://docs.nuget.org/docs/contribute/branding-the-nuget-gallery">Branding the Nuget Gallery</a>
+</li>
+</ul>
+</div>
+<div>
+<br>
+</div>
+</section>
+    <section data-id="546b7daf1d1a8409173ab19161b886e6">
+        <h2>Demo</h2>
+<div>
+    <br>
+</div>
+<div>
+        <span style="font-size: 30px; font-style: normal; font-variant: normal;">Install Chocolatey&nbsp;</span>
+    </div>
+<div>
+    <span style="font-size: 30px; font-style: normal; font-variant: normal;">
+        <br>
+    </span>
+    </div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">Install &nbsp;Notepad++</span>
+    <br>
+</div>
+<div>
+    <span style="font-size: 30px; font-style: normal; font-variant: normal;">
+        <br>
+    </span>
+    </div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">Chocolatey&nbsp;</span>
+    <span>Gallery: &nbsp;</span>
+    <a href="http://www.chocolatey.org/" style="font-size: 30px; font-style: normal; font-variant: normal;">http://www.chocolatey.org/</a>
+</div>
+<div>
+    <br>
+    </div>
+<div>
+<span>Boxstarter: Setup Dev Machine</span>
+    <span>&nbsp;</span>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>Create Package</div>
+</section>
+    <section data-id="43547cc1635ca7754d9f0a709bf80a59">
+        <h2>Benefits/Drawbacks</h2>
+<div>
+    <br>
+</div>
+<div>Can host packages offline</div>
+<div>
+        <br>
+        </div>
+<div>Needs internet if the packages try fetch meta-data while installation</div>
+<div>
+<br>
+</div>
+<div>Increasing no. of packages available through gallery</div>
+<div>
+<br>
+</div>
+<div>Not as polished as UNIX</div>
+<div>
+<br>
+</div>
+<div>
+<span>Unaware of applications installed outside of chocolatey</span>
+        <br>
+</div>
+<div>
+        <span>
+            <br>
+        </span>
+        </div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">Definitely a good start</span>
+        <span>
+            <br>
+        </span>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+        <section data-id="15a26b9cd2abf3820d476da025635856">
+            <h2>What does the future hold?</h2>
+<div>
+            <br>
+        </div>
+<div>Chocolatey got a HUGE validation push this week from Microsoft.</div>
+<div>
+        <br>
+    </div>
+<div>At BUILD, Microsoft announced OneGet&nbsp;</div>
+<div>as part of the Windows Management Framework 5.0 Preview</div>
+<div>
+    <br>
+</div>
+<div>OneGet is basically a software package manager for windows.</div>
+<div>
+<br>
+</div>
+<div>1st version will interact with Chocolatey repositories</div>
+<div>
+<br>
+</div>
+<div>Usage details @&nbsp;</div>
+<div>
+    <a href="http://learn-powershell.net/2014/04/03/checking-out-oneget-in-powershell-v5/">http://learn-powershell.net/2014/04/03/checking-out-oneget-in-powershell-v5/</a>
+    <br>
+</div>
+</section>
+<section data-id="bf01f392124c1300ebdc1f6b6c351e5e">
+    <h2>More Information</h2>
+<div>Main Web Site and Package Repository</div>
+<div>
+<a href="http://chocolatey.org/">http://chocolatey.org/</a>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+<div>Documentation</div>
+<div>
+<a href="https://github.com/chocolatey/chocolatey/wiki">https://github.com/chocolatey/chocolatey/wiki</a>
+</div>
+<div>
+<br>
+</div>
+<div>Command Reference</div>
+<div>
+<a href="https://github.com/chocolatey/chocolatey/wiki/CommandsReference">https://github.com/chocolatey/chocolatey/wiki/CommandsReference</a>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>Google Group</div>
+<div>
+<a href="https://groups.google.com/forum/#!forum/chocolatey">https://groups.google.com/forum/#!forum/chocolatey</a>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>Twitter</div>
+<div>
+<a href="https://twitter.com/chocolateynuget">https://twitter.com/chocolateynuget</a>
+<br>
+</div>
+<h2>
+</h2>
+</section>
+    <section data-id="23139e0d2f5b513781f55829d6bc5a61">
+        <h2>Questions?</h2>
+<div style="text-align: center;">
+    <br>
+</div>
+<div>
+    <div>
+<span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal;">Blog: digitaldrummerj.azurewebsites.net</span>
+        <br>
+</div>
+    <div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
+        <br>
+    </div>
+<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">Email:&nbsp;digitaldrummerj at gmail.com</div>
+    <div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
+    <br>
+</div>
+<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
+        Twitter: @digitaldrummerj
+    </div>
+    <div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
+<br>
+</div>
+<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
+<br>
+</div>
+</div>
+</section>
+<section data-id="1002c4596999cf01e926c1cef27d34f2">
+    <h2>Backup</h2>
+<div>
+    <br>
+</div>
+</section>
+<section data-id="4cfea4e140a84430bf0b26d2dce0a40e">
+    <h2>Cool Packages</h2>
+<div>
+    <br>
+    </div>
+<div>
+<div>Visual Studio 2013 Ultimate, Premium, Professional, and Express</div>
+<div>
+<span>Sql 2012 Express with SP1 (instance name not SqlExpress)</span>
+    <br>
+</div>
+<div>Linqpad or Linqpad4</div>
+<div>Sublime</div>
+<div>
+<span style="font-size: 30px; font-style: normal; font-variant: normal;">Nuget Package Explorer</span>
+    <br>
+</div>
+<div>
+<span>All JetBrains Products</span>
+    <br>
+</div>
+<div>Github for Windows /&nbsp;<span>TortoiseGIT</span>
+</div>
+<div>Chrome</div>
+<div>notepad++</div>
+<div>
+<span>DropBox</span>
+    <br>
+</div>
+</div>
+<div>BoxStarter</div>
+<div>Brackets</div>
+<div>
+    <br>
+</div>
+</section>
+<section data-id="ba6f1263694e3ee5c95c0d51ca82ab7d">
+    <h2>Chocolatey Package Templates</h2>
+<div>
+<ol>
+<li>
+<span style="text-align: center;">cinst warmup&nbsp;</span>
+    <br>
+</li>
+<li>
+<span style="text-align: center;">warmup addTextReplacement [Token] "Token Value"&nbsp;</span>
+    <br>
+</li>
+</ol>
+<ul>
+<li>
+<span style="text-align: center;">__CHOCO_PKG_OWNER_NAME__&nbsp;</span>
+    <br>
+</li>
+<li>
+<span style="text-align: center;">__CHOCO_PKG_OWNER_REPO__&nbsp;</span>
+    <br>
+</li>
+<li>
+<span style="text-align: center;">__CHOCO_AUTO_PKG_OWNER_REPO__&nbsp;</span>
+    <br>
+</li>
+</ul>
+<li>
+<span style="text-align: center;">git clone &nbsp;https://github.com/chocolatey/chocolateytemplates.git &nbsp;</span>
+    <br>
+</li>
+<li>
+<span style="text-align: center;">cd chocolateytemplates\_templates</span>
+    <br>
+</li>
+<li>
+<span style="text-align: center;">warmup addTemplateFolder chocolatey "%cd%\chocolatey"&nbsp;</span>
+    <br>
+</li>
+<ul>
+<li>
+    <span style="text-align: center;">chocolatey3 -&gt; regular, install, &amp; portable</span>
+</li>
+<li>
+<span style="text-align: center;">chocolate3auto -&gt; auto updating package</span>
+</li>
+<li>
+<span style="text-align: center;">chocolateyauto3 -&gt; same as 3 but auto updating</span>
+</li>
+</ul>
+</div>
+</section>
+<section data-id="779355c70bda45a0cd9288d1658ab92b">
+    <h2>Boxstarter Templates</h2>
+<div>Create basic nuspec and chocolateyInstall.ps1</div>
+<div>&nbsp;</div>
+<div>
+    <ol>
+<li>
+<span style="text-align: center;">New-BoxstarterPackage -Name MyPackage -Description ""</span>
+    <br>
+</li>
+<li>
+    <span style="text-align: center;">Edit nuspec</span>
+</li>
+<li>
+<span style="text-align: center;">Edit ChocolateyInstall.ps1</span>
+</li>
+<li>
+<span style="text-align: center;">Invoke-BoxstarterBuild MyPackage</span>
+</li>
+</ol>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<a href="http://boxstarter.org/CreatingPackages">http://boxstarter.org/CreatingPackages</a>
+<br>
+</div>
+</section>
+</div>
+
+            <!-- End Any Section element inside of this container is displayed as a slide -->
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

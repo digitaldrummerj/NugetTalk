@@ -1,0 +1,22 @@
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.ConsoleUI.csprojResolveAssemblyReference.cache
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.ConsoleUI.csprojResolveAssemblyReference.cache
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.pdb
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.ConsoleUI.csprojResolveAssemblyReference.cache
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\projects\Nuget Talk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.CAlculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb

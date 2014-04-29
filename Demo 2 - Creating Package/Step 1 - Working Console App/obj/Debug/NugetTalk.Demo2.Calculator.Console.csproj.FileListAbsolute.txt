@@ -1,0 +1,9 @@
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.csprojResolveAssemblyReference.cache
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\Users\Justin\Documents\Visual Studio 2013\Projects\Nuget Talk\Demo 2 - Creating Package\Step 1 - Working Console App\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb
