@@ -1,1 +1,0 @@
-start "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" "Demo 1 - Consuming Package\Demo 1.sln"
