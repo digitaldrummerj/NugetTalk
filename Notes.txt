@@ -1,0 +1,17 @@
+Why use package manager console?
+- Can install older versions
+- Can uninstall packages that have dependencies with the -IgnoreDependencies parameter
+
+Package Data Feed
+- show using linqpad query how to query a package manager feed.
+
+PMC
+- point them to nuget documentation for the different commands.  Don't spend a lot of time on the command line
+
+Slide Updates
+- Add who am I slide
+- Add question slide for:
+	- who is using nuget as a consumer?
+	- who is a command line junkie?
+	- who has created a nuget package?
+- 
