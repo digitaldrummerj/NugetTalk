@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- For more information on using transformations 
+     see the web.config examples at http://go.microsoft.com/fwlink/?LinkId=214134. -->
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+	<!-- If more than 1 appender, check for ConsoleAppender by name, then the conversionPattern and remove-->
+	<log4net xdt:Locator="Condition(count(/configuration/log4net/appender) > 0)">
+		<appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"
+			xdt:Locator="Match(name)"
+		>
+			<commandText value="INSERT INTO Log ([Date],[Thread],[Level],[Logger],[Message],[Exception]) VALUES (@log_date, @thread, @log_level, @logger, @message, @exception)" 		
+					xdt:Locator="Match(value)"
+					xdt:Transform="Remove"/>
+		</appender>
+	</log4net>
+	<!-- If the conversionPattern got removed then remove the whole layout node.-->
+	<log4net xdt:Locator="Condition(count(/configuration/log4net/appender) > 0)">
+		<appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"
+		xdt:Locator="Match(name)"
+		>
+			<commandText value="INSERT INTO Log ([Date],[Thread],[Level],[Logger],[Message],[Exception]) VALUES (@log_date, @thread, @log_level, @logger, @message, @exception)"
+				xdt:Transform="Remove"
+				xdt:Locator="Condition(count(*)=0)">
+			</layout>
+		</appender>
+
+	</log4net>
+	<!-- If the child node count = 1 then remove AdoNetAppender.  only node should be the filter node.-->
+	<log4net xdt:Locator="Condition(count(/configuration/log4net/appender) > 0)">
+		<appender name="AdoNetAppender" type="log4net.Appender.AdoNetAppender"
+			xdt:Transform="RemoveAll"
+			xdt:Locator="Condition(count(*)=1)">
+		</appender>
+	</log4net>
+
+	<!-- if more than 1 appender and AdoNetAppender doesn't exist, them remove the appender-ref -->
+	<log4net xdt:Locator="Condition(count(/configuration/log4net/appender[@name='AdoNetAppender'])= 0)">
+		<root>
+			<appender-ref ref="AdoNetAppender"
+				xdt:Transform="Remove"
+				xdt:Locator="Match(ref)"
+			/>
+		</root>
+	</log4net>
+
+	<!-- if not appenders then remove the log4net configSection -->
+	<configSections xdt:Locator="Condition(count(/configuration/log4net/appender)= 0)">
+		<section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"
+				xdt:Locator="Match(name)"
+				xdt:Transform="Remove"
+		/>
+	</configSections>
+
+	<!-- if not child elements for the configSections then remove configSections. -->
+	<!--<configSections xdt:Transform="RemoveAll" xdt:Locator="Condition(count(*)=0)" />-->
+	<configSections xdt:Transform="RemoveAll" xdt:Locator="Condition(count(/configuration/configSections/*)= 0)" />
+
+	<!-- if no appenders then remove the log4net section. -->
+	<log4net xdt:Transform="RemoveAll" xdt:Locator="Condition(count(/configuration/log4net/appender)= 0)" />
+</configuration>

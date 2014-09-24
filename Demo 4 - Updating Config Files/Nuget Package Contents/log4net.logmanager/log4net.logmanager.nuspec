@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>log4net.logmanager</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Justin James</authors>
     <owners>Justin James</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

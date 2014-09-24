@@ -1,0 +1,158 @@
+
+PowerShell -NoProfile -ExecutionPolicy Bypass -File "..\IncrementNugetVersionNumber.ps1" -NuspecFile "log4net.database.console.nuspec" -RevisionVersion "" -MajorVersion "" -MinorVersion ""
+Resolve-Path : Cannot find path 'C:\projects\NugetTalk\Demo 4 - Updating 
+Config Files\Nuget Package 
+Contents\log4net.appender.database\log4net.database.console.nuspec' because it 
+does not exist.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:90 char:15
++ $NuSpecFile = Resolve-Path $NuSpecFile
++               ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\projects\Nug....console.nusp 
+   ec:String) [Resolve-Path], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.Resol 
+   vePathCommand
+ 
+Get-Content : Cannot bind argument to parameter 'Path' because it is null.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:92 char:42
++ [ xml ]$fileContents = Get-Content -Path $NuSpecFile
++                                          ~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Get-Content], ParameterBinding 
+   ValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,M 
+   icrosoft.PowerShell.Commands.GetContentCommand
+ 
+New-Object : Constructor not found. Cannot find an appropriate constructor for 
+type System.Xml.XmlNamespaceManager.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:17 char:50
++     [System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object 
+System.Xml.XmlNamesp ...
++                                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentExce 
+   ption
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.C 
+   ommands.NewObjectCommand
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:18 char:2
++     $xmlNsManager.AddNamespace("ns", $NamespaceURI)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:33 char:2
++     $node = $XmlDocument.SelectSingleNode($fullyQualifiedNodePath, 
+$xmlNsManager)
++     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+Setting Version to 1.0.0
+New-Object : Constructor not found. Cannot find an appropriate constructor for 
+type System.Xml.XmlNamespaceManager.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:17 char:50
++     [System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object 
+System.Xml.XmlNamesp ...
++                                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentExce 
+   ption
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.C 
+   ommands.NewObjectCommand
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:18 char:2
++     $xmlNsManager.AddNamespace("ns", $NamespaceURI)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:33 char:2
++     $node = $XmlDocument.SelectSingleNode($fullyQualifiedNodePath, 
+$xmlNsManager)
++     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:71 char:4
++          $element = $XmlDocument.CreateElement($elementName, 
+$XmlDocument.DocumentElem ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:72 char:3
++         $textNode = $XmlDocument.CreateTextNode($TextValue)
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:73 char:3
++         $element.AppendChild($textNode) > $null
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+New-Object : Constructor not found. Cannot find an appropriate constructor for 
+type System.Xml.XmlNamespaceManager.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:17 char:50
++     [System.Xml.XmlNamespaceManager]$xmlNsManager = New-Object 
+System.Xml.XmlNamesp ...
++                                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentExce 
+   ption
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.C 
+   ommands.NewObjectCommand
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:18 char:2
++     $xmlNsManager.AddNamespace("ns", $NamespaceURI)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+You cannot call a method on a null-valued expression.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:33 char:2
++     $node = $XmlDocument.SelectSingleNode($fullyQualifiedNodePath, 
+$xmlNsManager)
++     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+ 
+package.metadata does not exist in the xml.
+At C:\projects\NugetTalk\Demo 4 - Updating Config Files\Nuget Package 
+Contents\IncrementNugetVersionNumber.ps1:85 char:4
++             throw "$parentNodePath does not exist in the xml."
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (package.metadat...ist in the  
+   xml.:String) [], RuntimeException
+    + FullyQualifiedErrorId : package.metadata does not exist in the xml.
+ 
+
+nuget pack -OUTPUTDIR ""..\..\..\Nuget Packages""
+Attempting to build package from 'log4net.appender.database.nuspec'.
+Successfully created package '..\..\..\Nuget Packages\log4net.appender.console.1.0.0.nupkg'.
