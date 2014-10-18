@@ -15,7 +15,7 @@ namespace NugetTalk.Demo2.Calculator
 
         public static double Subtract(double firstNumber, double secondNumber)
         {
-            return secondNumber - firstNumber;
+		   return firstNumber - secondNumber;
         }
 
         public static double Multiply(double firstNumber, double secondNumber)
