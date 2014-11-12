@@ -1,0 +1,11 @@
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\bin\Debug\WinFormUI.exe.config
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\bin\Debug\WinFormUI.exe
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\bin\Debug\WinFormUI.pdb
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\bin\Debug\NugetTalk.Demo2.Calculator.pdb
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.csprojResolveAssemblyReference.cache
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.Form1.resources
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.Properties.Resources.resources
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.csproj.GenerateResource.Cache
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.exe
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\WinFormUI\obj\Debug\WinFormUI.pdb

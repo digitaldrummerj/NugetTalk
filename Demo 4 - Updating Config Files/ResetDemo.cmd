@@ -3,17 +3,18 @@ rmdir packages /S /Q
 del "..\Nuget Packages\log4net.logmanager.*.nupkg"
 del "..\Nuget Packages\log4net.blank.config.*.nupkg"
 del "..\Nuget Packages\log4net.appender.console.*.nupkg"
+rmdir Nuget.Config.Xdt.Tests\packages /S /Q
 
-rmdir Log4netNugetConsoleAppenderSample\bin /S /Q
-rmdir Log4netNugetConsoleAppenderSample\obj /S /Q
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "gci -fil 'bin' -r -force | ri -r -force"
+
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "gci -fil 'obj' -r -force | ri -r -force"
+
 rmdir Log4netNugetConsoleAppenderSample\packages /S /Q
 rmdir Log4netNugetConsoleAppenderSample\LogManager /S /Q
 
+
 del Log4NetNugetConsoleAppenderSample\packages.config
 copy Log4NetNugetConsoleAppenderSample\log4netClean.config Log4NetNugetConsoleAppenderSample\log4net.config /Y
-
-rmdir Nuget.Config.Xdt.Tests\bin /S /Q
-rmdir Nuget.Config.Xdt.Tests\obj /S /Q
 
 copy Log4NetNugetConsoleAppenderSample\ProgramClean.cs Log4NetNugetConsoleAppenderSample\Program.cs /Y
 

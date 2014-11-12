@@ -1,1656 +1,894 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>Nuget Essentials</title>
-
 		<meta name="description" content="Nuget a package manager for Visual Studio and more">
 		<meta name="author" content="Justin James">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/night.css" id="theme">
-
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
+			if (window.location.search.match(/print-pdf/gi)) {
+				var link = document.createElement('link');
 				link.rel = 'stylesheet';
 				link.type = 'text/css';
 				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
+				document.getElementsByTagName('head')[0].appendChild(link);
 			}
 		</script>
-
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+			<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
-    <section data-id="ceff4c94d95dd4dadeca56c2a9548bbb">
-        <h1>Nuget Essentials</h1>
-<div>
-        <br>
-    </div>
-<div>
-    <br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<h3 style="text-align: right; ">
-<span>
-    <br>
-</span>
-</h3>
-<h3 style="text-align: right; ">
-<span>Justin James</span>
-<br>
-</h3>
-<div style="text-align: right;">
-<span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal;">
-    <br>
-</span>
-</div>
-<div style="text-align: right;">
-<span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal;">Blog: http://randomcoder.azurewebsites.net</span>
-<br>
-</div>
-<div style="text-align: right; ">Email:&nbsp;<span>digitaldrummerj at gmail.com</span>
-</div>
-<div style="text-align: right; ">
-<span style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">Twitter: @digitaldrummerj</span>
-<span>
-    <br>
-</span>
-</div>
-</section>
-<section data-id="46c7b52a8375a306fe06e4782a192adb">
-    <h2>Topics</h2>
-<div>Why I should care</div>
-<div>
-    <br>
-    </div>
-<div>
-<span>Consuming Packages</span>
-    <br>
-</div>
-<div>
-    <br>
-</div>
-<div>Creating Packages</div>
-<div>
-<br>
-</div>
-<div>Advanced Creating Packages</div>
-<div>
-<br>
-</div>
-<div>Hosting your own package feed</div>
-<div>
-<br>
-</div>
-<div>Other Projects</div>
-<div>
-<br>
-</div>
-<div>More Information</div>
-</section>
-<section data-id="d4386279e1ab40d40b38c4f52a291518">
-    <h2>What is the heck Nuget?</h2>
-<div>.NET Package Manager integrated into Visual Studio&nbsp;</div>
-<div>
-<br>
-</div>
-<div>
-<span>Easy way to quickly add: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-</div>
+			<div class="slides">
+				<section class="" data-id="2717bbd67aeefa4901f762b2cadcb69d">
+					<h2>Nuget is easier than you think&nbsp;</h2>
+					<h2>and&nbsp;</h2>
+					<h2>you should be using it.</h2>
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<p style="text-align: center;">
+						<span>
+							By
+							<br />
+						</span>
+						<span>Justin James</span>
+					</p>
+					<div style="text-align: right;">
+						<br />
+					</div>
+				</section>
+				<section class="" data-id="f29eb1d0437eba7af154dc8370744f9a">
+					<h2>About Me</h2>
+					<div>
+						<br />
+					</div>
+					<div>My name is Justin James. &nbsp;I'm a software craftsman building &nbsp;applications in ASP.NET and C# at Intel. &nbsp;I have been using .NET since the 1.0 beta days. &nbsp;</div>
+					<div>
+						<br />
+					</div>
+					<div>You can find all of my presentations at&nbsp;</div>
+					<div>http://www.slides.com/digitaldrummerj</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">Code Demos</span>
+					</div>
+					<div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">
+							<span style="font-size: 30px; font-style: normal; font-variant: normal;">github.com/digitaldrummerj/NugetTalk</span>
+							<br />
+						</div>
+					</div>
+					<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: right;">
+							<div style="text-align: center;">
+								<span style="font-size: 30.2461395263672px; font-style: normal; font-variant: normal;">Follow me on twitter&nbsp;</span>
+							</div>
+							<span style="font-size: 30.2461395263672px; font-style: normal; font-variant: normal;">
+								<div style="text-align: center;">
+									<span style="font-size: 30.2461395263672px; font-style: normal; font-variant: normal;">@digitaldrummerj</span>
+								</div>
+							</span>
+						</div>
+					</div>
+				</section>
+				<section data-id="46c7b52a8375a306fe06e4782a192adb" class="">
+					<h2>Topics</h2>
+					<div>
+						<br />
+					</div>
+					<div>Nuget Feature Overview</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="0">
+						<span>Consuming Packages</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="1">Creating Packages</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="2">Advanced Creating Packages</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="3">Hosting your own package feed</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="4">Other Projects using Nuget</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="5">More Information</div>
+				</section>
+				<section class="" data-id="df578de3e688da7bdc53c580ea571f32">
+					<h2>Survey</h2>
+					<div class="fragment" data-fragment-index="0">How many of you have consumed a nuget package?</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="1">How many of you have created your own nuget packages?</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="2">How many have hosted your own nuget package feed?</div>
+					<div>
+						<br />
+					</div>
+				</section>
+				<section data-id="d4386279e1ab40d40b38c4f52a291518" class="">
+					<h2>What is the heck Nuget?</h2>
+					<div>Package Manager for .NET &nbsp;</div>
+					<div>
+						<br />
+					</div>
+					<div>Way to easily share libraries, code, configurations</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">GUI is integrated into Visual Studio&nbsp;</span>
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">or</span>
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">Available as command line</span>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">&nbsp;</span>
+						<br />
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span>Package format is a nupkg file</span>
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>Similar to npm or bower in the node/angular world.</div>
+					<div>
+						<br />
+					</div>
+					<div>Note: Powershell 2.0 is required.</div>
+				</section>
+				<section data-id="6dd7d105537c31964d822d9cd35431b8" class="">
+					<h2>What does a nupkg do?</h2>
+					<div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+							Includes everything necessary to install a library or tool&nbsp;
+							<br />
+						</div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">Installs package dependencies</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<br />
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">Can copy files to your solution&nbsp;</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<br />
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">Can add references</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<br />
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								Can
+								<span>&nbsp;update app.config / web.config</span>
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<span>
+									<br />
+								</span>
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<span>Can run powershell scripts</span>
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<span>
+									<br />
+								</span>
+							</div>
+							<div style="font-size: 30px; font-style: normal; font-variant: normal;">
+								<span>On uninstall, removes files, and reverses changes made in the project</span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-id="1406cf18bd49154a88fbf2d4ba5aff06" class="">
+					<h2>Where can I get nuget packages?</h2>
+					<div>
+						<br />
+					</div>
+					<div>
+						Public Gallery:&nbsp;http://www.nuget.org/packages&nbsp;
 
-<div>
-    <ul>
-<li>
-<span style="text-align: center;">references&nbsp;</span>
-    <span style="text-align: center;">&nbsp;</span>
-</li>
-<li>
-<span style="text-align: center;">source files&nbsp;</span>
-    <br>
-</li>
-<li>
-<span style="text-align: center;">update config files</span>
-    <br>
-</li>
-<li>
-<span style="text-align: center;">run powershell scripts</span>
-    <br>
-</li>
-</ul>
-</div>
+					</div>
+					<div><br /></div>
+					<div class="fragment" data-fragment-index="0">
+						Public Feed: &nbsp;https://www.nuget.org/api/v2/
+					</div>
+					<p>&nbsp;</p>
+					<div class="fragment" data-fragment-index="1">
+						<span>A package source can be any URL or folder path</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="2">You can have multiple sources configured</div>
+					<div>
+						<br />
+					</div>
+				</section>
+				<section data-id="bcba24ab8edbaee141922db470a980e5">
+					<h2>What happens when I consume a package?</h2>
+					<div>
+						<br />
+					</div>
+					<ol>
+						<li class="fragment" data-fragment-index="0">
+							<span style="text-align: center;">Looks at package&nbsp;</span>
+							<span style="text-align: center;">dependencies to figure out what is installed&nbsp;</span>
+						</li>
+						<li class="fragment" data-fragment-index="1">
+							<span style="text-align: center;">Downloads any missing dependencies and installs them</span>
+							<span></span>
+						</li>
+						<li class="fragment" data-fragment-index="2">
+							Downloads package&nbsp;and installs it
+						</li>
+						<li class="fragment" data-fragment-index="3">package.config file created in project folder</li>
+						<li class="fragment" data-fragment-index="4">repositories.config file is created in the packages folder</li>
+					</ol>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="5">Note: The packages are store in a packages folder within the same directory as the &lt;Your Solution&gt;.sln</div>
+					<div>
+						<br />
+					</div>
+				</section>
+				<section class="" data-id="6b4103dc8879cf429db9332bfb80fcb31">
+					<h2>What does install a package mean?</h2>
+					<br />
+					<ol>
+						<li class="fragment" data-fragment-index="0">If package is used before then Uninstall.ps1 is run</li>
+						<li class="fragment" data-fragment-index="1">References, Source Files, and Config changes are removed</li>
+						<li class="fragment" data-fragment-index="2">A folder for each package is created in the package folder</li>
+						<li class="fragment" data-fragment-index="3">Package is uncompressed</li>
+						<li class="fragment" data-fragment-index="4">Any dll in the lib folder is added as a reference</li>
+						<li class="fragment" data-fragment-index="5">Any directories/files in the content folder are copied into the project</li>
+						<li class="fragment" data-fragment-index="6">Files with a .pp extensions are transformed into source files</li>
+						<li class="fragment" data-fragment-index="7">Xml files with a .transform extension are merged</li>
+						<li class="fragment" data-fragment-index="8">Xml files with a (un)install.xdt are transformed</li>
+						<li class="fragment" data-fragment-index="9">Init.ps1 is run</li>
+						<li class="fragment" data-fragment-index="10">Install.ps1 is run</li>
+					</ol>
+					<p>&nbsp;</p>
+					<div class="fragment" data-fragment-index="11">Note: Powershell scripts are optional</div>
 
+				</section>
+				<section class="" data-id="6b4103dc8879cf429db9332bfb80fcb3">
+					<h2>What happens when I build a solution?</h2>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="0">
+						<span style="font-weight: bold">From within visual studio</span>
 
+						<div>Missing packages will automatically be downloaded before the 1st project is built</div>
+					</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="1">
+						<span style="font-weight: bold">Using MSBuild:</span>
+						<div>run nuget.exe restore in the sln directory to download missing packages</div>
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
 
-<div>
-<br>
-</div>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">On uninstall reverses changes made to the project</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-</div>
-</div>
-<div>
-<span>Integrated into Visual Studio or command line</span>
-<br>
-</div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <br>
-</span>
-</div>
-<div>Package extension is .nupkg</div>
-<div>
-<br>
-</div>
-<div>Powershell 2.0 is required.</div>
+					<div class="fragment" data-fragment-index="3">Note: This feature is called package restore</div>
+				</section>
+				<section data-id="2917318425a28e32146b5ca3d05afe92" class="">
+					<h2>
+						Demo
+					</h2>
+					<div>
+						<br />
+					</div>
+					<div>UI Overview</div>
+					<div>
+						<br />
+					</div>
+					<div>Nuget Commands Overview</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span>Consuming Packages</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>Package Restore&nbsp;</div>
+				</section>
+				<section class="" data-id="e44434a0eb163059bd6d14a30379fc6c">
+					<h2>Creating Packages Topics</h2>
+					<div>
+						<br />
+					</div>
+					<div>Basic Package Creation</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="0">Supporting Multiple Frameworks</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="1">Update Configuration Files</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="2">Include Source Code&nbsp;</div>
+					<div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="3">Install/Uninstall Scripts</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+				</section>
+				<section data-id="bc8269b23441233aeed4255d6793a345" class="">
+					<h2>Creating Packages Overview</h2>
+					<div>
+						<span>Can create from a </span>
+						<span>project, assembly or directory</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>May contain:&nbsp;</div>
+					<div>assemblies, source code, powershell scripts, executables, config files, config/source transformations</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span>Most packages are project level&nbsp;</span>
+						<br />
+					</div>
+					<div>but you can create solution level packages.</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span>Can support multiple .NET framework Versions and Profiles</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span>
+							<br />
+						</span>
+					</div>
+					<div>
+						<span>If publishing package publicly, need a free account at </span>
+						<a href="http://nuget.org/">http://nuget.org/</a>
+						<span>&nbsp;</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+				</section>
+				<section class="" data-id="5dd2ea4fd64e3d967505931a4fb6f5b8">
+					<h2>Solution level Packages</h2>
+					<div>
+						<div>Installs a tool or additional commands for the Package Manager console</div>
+						<div>
+							<br />
+						</div>
+						<div>Does not add references, content, or build customizations to any projects in your solution.&nbsp;</div>
+						<div>
+							<br />
+						</div>
+						<div>A package is considered a solution-level package if it and it dependencies do not contain any files in its lib, content, or build directories.&nbsp;</div>
+						<div>
+							<br />
+						</div>
+						<div>
+							<span>Tracked in a packages.config file in the .nuget directory, rather than in a packages.config file in a specific project.</span>
+							<br />
+						</div>
+						<div>
+							<span>
+								<br />
+							</span>
+						</div>
+						<div>
+							<span>Example: psake package</span>
+						</div>
+					</div>
+				</section>
+				<section data-id="8b2fc786285f23ef2267c29e3f6a49c4" class="">
+					<h2>Package Conventions</h2>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">Nuget uses convention over configuration approach</span>
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">In general, have one package per assembly. &nbsp;</span>
+						<br />
+					</div>
+					<div>
+						<span>
+							<br />
+						</span>
+					</div>
+					<div>
+						<span>Package ID and Version are the identifiers used in the package feed</span>
+						<br />
+					</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<div style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">Version is normally the version number of the assembly</div>
+						<div style="font-size: 29.7986011505127px; font-style: normal; font-variant: normal;">
+							<br />
+						</div>
+					</div>
+					<div>
+						<span>Standard Directories:</span>
+						<br />
+					</div>
+					<div>Tools - powershell scripts and programs accessible from PM</div>
+					<div>lib - Assemblies are added as references during install</div>
+					<div>content - files to copy to root of your project during install</div>
+					<div>build - MSBuild targets that are inserted into project file</div>
+				</section>
+				<section data-id="362af693a82c1219da0cdde5e7ff7ef3" class="">
+					<h2>Supporting Multiple Frameworks</h2>
+					<div>
+						<span>supports multiple frameworks in same package</span>
+						<br />
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">can target any .NET profiles (client, full, compact)</span>
+						<br />
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">Framework name is case sensitive</span>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">
+							<br />
+						</span>
+					</div>
+					<div>naming convention is&nbsp;</div>
+					<div>[lib/content/tools]\{framework}{version}</div>
+					<div>
+						<br />
+					</div>
+					<div>
+						<span>Examples</span>
+						<span>:&nbsp;</span>
+						<br />
+					</div>
+					<div>
+						<span>lib\net20 to support .NET 2.0</span>
+					</div>
+					<div>
+						<span>
+							lib\net40-client to support .NET 4.0 client profile
+							<br />
+						</span>
+					</div>
+					<div>
+						<span>
+							<br />
+						</span>
+					</div>
+					<div>
+						<span>Note:&nbsp;</span>
+						<span style="font-size: 30px; font-style: normal; font-variant: normal;">empty folder indicates don't do anything for that version</span>
+					</div>
+				</section>
+				<section data-id="55f37eb6239feecc45862d827901e5a1" class="">
+					<h2>Basic Package Creation</h2>
+					<div>Download nuget command line&nbsp;</div>
+					<div>Put nuget.exe into your path</div>
+					<br />
+					<div class="fragment" data-fragment-index="0">
+						Generate from assembly
+						<br /><ul><li><span style="text-align: center;">nuget spec MyAssembly.dll</span></li><li><span style="text-align: center;">nuget pack MyAssembly.nuspec</span></li></ul>
+					</div>
+					<br /><div><div class="fragment" data-fragment-index="1">Generate from project file&nbsp;<br /><ul><li><span style="text-align: center;">nuget spec -&gt; from the project file dir</span><br /></li><li><span style="text-align: center;">nuget pack MyProject.csproj&nbsp;</span></li></ul></div><br /><div class="fragment" data-fragment-index="2">Generate from convention based directory<br /><ul><li><span style="text-align: center;">nuget spec package.id</span></li><li><span style="text-align: center;">nuget pack &nbsp;package.id.nuspec</span></li></ul></div></div>
+				</section>
+				<section class="" data-id="d45407193b83ce5d76ec52b53da465e3">
+					<h2>Example Nuget Spec Non-VS</h2><div>
+						                                  <pre style="font-size: 20px"><code> &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;packagexmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd"&gt;
+  &lt;metadata&gt;
+    &lt;id&gt;log4net.blank.config&lt;/id&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;title&gt;Log4Net Blank Configuration File&lt;/title&gt;
+    &lt;authors&gt;Justin James&lt;/authors&gt;
+    &lt;owners&gt;Justin James&lt;/owners&gt;
+    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
+    &lt;description&gt;Inserts a blank log4net.config file.&lt;/description&gt;
+    &lt;summary&gt;Log4Net Blank Configuration File&lt;/summary&gt;
+    &lt;releaseNotes&gt;Initial Rev&lt;/releaseNotes&gt;
+    &lt;dependencies&gt;
+      &lt;dependency id="log4net" version="2.0.3" /&gt;
+    &lt;/dependencies&gt;
+  &lt;/metadata&gt;
+  </code></pre>
+						                                  <pre style="font-size: 20px"><code>
+  &lt;files&gt;
+    &lt;file src="**" exclude="build.cmd" /&gt;
+  &lt;/files&gt;
+&lt;/package&gt;</code></pre>
+					                                  </div>
+				</section>
+				<section data-id="7468b9bb20e3f22f6e30678eb6ed841f">
+					<h2>Example Nuget Spec - VS</h2>
+					<div>
+						<pre style="font-size: 20px"><code>&lt;?xml version="1.0"?&gt;
+&lt;package &gt;
+  &lt;metadata&gt;
+    &lt;id&gt;$id$&lt;/id&gt;
+    &lt;version&gt;$version$&lt;/version&gt;
+    &lt;title&gt;$title$&lt;/title&gt;
+    &lt;authors&gt;$author$&lt;/authors&gt;
+    &lt;owners&gt;$author$&lt;/owners&gt;
+    &lt;requireLicenseAcceptance&gt;false&lt;/requireLicenseAcceptance&gt;
+    &lt;description&gt;$description$&lt;/description&gt;
+    &lt;releaseNotes&gt; Summary of changes made in this release.&lt;/releaseNotes&gt;
+    &lt;copyright&gt;Copyright 2014&lt;/copyright&gt;
+    &lt;tags&gt;Demo&lt;/tags&gt;
+  &lt;/metadata&gt;
+&lt;/package&gt;</code></pre>
+					</div><br />
+				</section>
+				<section data-id="246e691f3971f9416955bdc675b2179c" class="">
+					<h2>Spec Replacement Tokens</h2>
+					<div><br /></div>
+					<div><br /></div>
+					<div class="fragment" data-fragment-index="0">$id$ -&gt; The Assembly Name</div><div><br /></div>
+					<div class="fragment" data-fragment-index="1">$version$ - version specified in the AssemblyVersion attribute</div>
+					<div><br /></div><div class="fragment" data-fragment-index="2">$author$ - company in the AssemblyCompany attribute</div><div><br /></div>
+					<div class="fragment" data-fragment-index="3">$description$ - description in the AssemblyDescription attribute</div>
+					<div><br /></div><div class="fragment" data-fragment-index="4">$configuration$ - build configuration (debug/release)</div>
 
-</section>
-<section data-id="1406cf18bd49154a88fbf2d4ba5aff06">
-    <h2>Possible Package Locations</h2>
-<div>
-    <br>
-    </div>
-<div>
-<span>Source can be a URL or folder path</span>
-    <br>
-</div>
-<div>
-    <br>
-    </div>
-<div>
-<span>Default Source: &nbsp;https://www.nuget.org/api/v2/</span>
-    <br>
-</div>
-<div>
-    <span>
-        <br>
-    </span>
-</div>
-<div>
-<span>Add/Update/Delete/Disable Sources&nbsp;<br>
-</span>
-<span>Tools -&gt; Options -&gt; Package Manager -&gt; Package Sources&nbsp;</span>
-</div>
-<div>
-<br>
-</div>
-<div>
-<span>-Source switch for nuget commands to change source&nbsp;</span>
-<br>
-</div>
-</section>
-<section data-id="5206721c12b05c956a10b4447ee675d8">
-    <h2>Finding Packages</h2>
-<div>
-    <br>
-</div>
-<div>In Visual Studio under&nbsp;<span>Tools -&gt; Nuget Package Manager:&nbsp;</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">Manage Nuget Packages for Solution&nbsp;</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Package Manager Console&nbsp;</span>
-</li>
-</ul>
-</div>
-<div>
-<br>
-</div>
-<div>or&nbsp;</div>
-<div>
-<br>
-</div>
-<div>In Solution Explorer, right click on project, select Manage Nuget Packages&nbsp;</div>
-<div>
-<br>
-</div>
-<div>or&nbsp;</div>
-<div>
-<br>
-</div>
-<div>
-<a href="http://www.nuget.org/">http://nuget.org/</a>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="1793d414e19b194da2cc2b8c9f8e9ea3">
-    <h2>Installing Nuget</h2>
-<div>
-    <br>
-</div>
-<div>VS2010 - Available thru VS Extension Manager</div>
-<div>
-<br>
-</div>
-<div>VS2012+ - included with every edition by default</div>
-<div>
-<br>
-</div>
-<div>WebMatrix 3 - integrated with the id of "NuGetPackageManager"</div>
-<div>
-<br>
-</div>
-<div>Command Line - Can be downloaded at http://nuget.org/nuget.exe</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="919024f10dd0b78506e7176902fc673d">
-    <h2>3 ways to play with packages</h2>
-<div>
-    <span>
-        <b>For Whole Solution:</b>
-    </span>
-    </div>
-<div>Tools -&gt;&nbsp;<span>Nuget Package Manager -&gt;&nbsp;</span>
-    <span>Manage Nuget Packages for Solution</span>
-</div>
-<div>
-    <br>
-</div>
-<div>
-<b>
-<br>
-</b>
-</div>
-<div>
-<b>For Project:</b>
-</div>
-<div>In Solution Explorer -&gt;&nbsp;<span>Right-click on project -&gt; select Manage Nuget Packages</span>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<b>Powershell Based</b>
-</div>
-<div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Tools -&gt;&nbsp;<span>Nuget Package Manager -&gt;&nbsp;</span>
-<span>Package Manager Console</span>
-</div>
-</div>
-</section>
-<section data-id="2b440356836906fc99b27e903aca4184">
-    <h2>Common Commands</h2>
-<div>Manage Nuget Packages for Solution&nbsp;</div>
-<div>
-    <ul>
-<li>
-    <span style="text-align: center;">List / Search</span>
-    </li>
-<li>
-<span style="text-align: center;">Install&nbsp;</span>
-    <br>
-</li>
-<li>
-    <span style="text-align: center;">Update&nbsp;</span>
-</li>
-<li>
-<span style="text-align: center;">Uninstall</span>
-</li>
-</ul>
-</div>
-<div>
-<br>
-</div>
-<div>PM Console Commands&nbsp;</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">Install-Package&nbsp;</span>
-</li>
-<li>
-<span style="text-align: center;">Update-Package&nbsp;</span>
-</li>
-<li>
-<span style="text-align: center;">Uninstall-Package</span>
-</li>
-<li>
-<span style="text-align: center;">Get-Package</span>
-<br>
-</li>
-</ul>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="0bcec886b0721272222a3204e47052ca">
-    <h2>Getting Help</h2>
-<div>
-    <br>
-    </div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">All of nuget's documentation:&nbsp;</span>
-    <a href="http://docs.nuget.org/" style="font-size: 30px; font-style: normal; font-variant: normal;">http://docs.nuget.org/</a>
-    <br>
-</div>
-<div>
-    <br>
-    </div>
-<div>
-<b style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Package Manager Command Help</b>
-    <br>
-</div>
-<div>
-    <b style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-        <br>
-    </b>
-</div>
-<div>get-help nuget -&gt; gets available nuget commands</div>
-<div>
-<br>
-</div>
-<div>get-help [nuget command] -&gt; get specific command help</div>
-<div>
-<br>
-</div>
-<div>common help parameters:</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">-examples&nbsp;</span>
-</li>
-<li>
-<span style="text-align: center;">-detailed</span>
-</li>
-<li>
-<span style="text-align: center;">-full</span>
-</li>
-<li>
-<span style="text-align: center;">-online&nbsp;</span>
-</li>
-</ul>
-</div>
-</section>
-<section data-id="d1bf56b5a1eef4805746444d311c0cc7">
-    <h2>Package Restore</h2>
-<p>
-    <span style="color: rgb(0, 0, 0);">Don't store package in source control.</span>
-</p>
-<div>
-<br>
-</div>
-<div>
-<span>Use Automatic Package Restore instead&nbsp;</span>
-<br>
-</div>
-<div>
-    <br>
-</div>
-<div>As of NuGet 2.7, packages will be restored when a VS build begins.</div>
-<div>Or&nbsp;<span>&nbsp;</span>
-</div>
-<div>Command Line:&nbsp;</div>
-<blockquote>
-    <div>nuget.exe restore</div>
-    <div>nuget.exe restore contoso.sln</div>
-    <div>nuget.exe restore contoso</div>
-</blockquote>
-<div>
-    <br>
-</div>
-</section>
-<section data-id="2917318425a28e32146b5ca3d05afe92">
-    <h2>
-Demo</h2>
-<div>
-    <br>
-    </div>
-<div>Nuget Commands Overview</div>
-<div>
-<br>
-</div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">Adding new package source&nbsp;</span>
-    <br>
-</div>
-<div>
-    <span style="font-size: 30px; font-style: normal; font-variant: normal;">
-        <br>
-    </span>
-    </div>
-<div>Consuming Packages</div>
-<div>
-<br>
-</div>
-<div>Package Restore&nbsp;</div>
-</section>
-<section data-id="bc8269b23441233aeed4255d6793a345">
-    <h2>Creating Packages</h2>
-<div>
-    <br>
-</div>
-<div>Create from a <span>project or assembly or directory</span>
-</div>
-<div>
-<br>
-</div>
-<div>May contain: assemblies, source code to be injected, powershell scripts, executables, config files, config/source transformations, etc.</div>
-<div>
-<br>
-</div>
-<div>Most packages are project level but you can create solution level packages.</div>
-<div>
-<br>
-</div>
-<div>Can support multiple .NET framework Versions and Profiles</div>
-<div>
-<br>
-</div>
-<div>If publishing package publicly, need a free account at <a href="http://nuget.org/">http://nuget.org/</a>&nbsp;</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="8b2fc786285f23ef2267c29e3f6a49c4">
-    <h2>Package Conventions</h2>
-<div>
-    <br>
-</div>
-<div>Package ID should be Namespace.Usage.</div>
-<div>
-    <br>
-    </div>
-<div>
-<span>In general, have one package per assembly. &nbsp;</span>
-    <br>
-</div>
-<div>
-    <br>
-</div>
-<div>Version is normally the version number of the assembly</div>
-<div>(Major.Minor.Patch)</div>
-<div>
-<br>
-</div>
-<div>Standard Directories:</div>
-<div>Tools - powershell scripts and programs accessible from PM</div>
-<div>lib - Assemblies are added as references during install</div>
-<div>content - files to copy to root of your project during install</div>
-<div>build - MSBuild targets that are inserted into project file</div>
+				</section>
+				
 
-</section>
-<section data-id="362af693a82c1219da0cdde5e7ff7ef3">
-    <h2>Supporting Multiple Frameworks</h2>
-<div>
-    <br>
-</div>
-<div>can put multiple framework versions in same package</div>
-<div>
-<br>
-</div>
-<div>naming convention is&nbsp;</div>
-<div>[lib/content/tools]\{framework}\{version}</div>
-<div>
-<br>
-</div>
-<div>folder can be empty to indicate don't do anything for that version</div>
-<div>
-<br>
-</div>
-<div>can also target profiles by adding -[Profile Name] to the {framework}&nbsp;</div>
-<div>
-<br>
-</div>
-<div>name is case sensitive</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="55f37eb6239feecc45862d827901e5a1">
-    <h2>Basic Package Creation</h2>
-<div>Download nuget command line&nbsp;</div>
-<div>Put nuget.exe into your path</div>
-<div>
-    <br>
-</div>
-<div>Generate from assembly</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">nuget spec MyAssembly.dll&nbsp;</span>
-<br>
-</li>
-<li style="text-align: center; ">nuget pack MyAssembly.nuspec</li>
-</ul>
-</div>
-<div>
-<br>
-</div>
-<div>Generate from project file&nbsp;</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">nuget spec -&gt; from the project file dir</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">nuget pack MyProject.csproj&nbsp;</span>
-</li>
-</ul>
-<div>
-<br>
-</div>
-<div>Generate from convention based directory</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">nuget spec package.id</span>
-</li>
-<li>
-<span style="text-align: center;">nuget pack &nbsp;package.id.nuspec</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<section data-id="246e691f3971f9416955bdc675b2179c">
-    <h2>Spec Replacement Tokens</h2>
-<div>
-    <br>
-</div>
-<div>
-<br>
-</div>
-<div>$id$ -&gt; The Assembly Name</div>
-<div>
-<br>
-</div>
-<div>$version$ - version specified in the AssemblyVersion attribute</div>
-<div>
-<br>
-</div>
-<div>$author$ - company in the AssemblyCompany attribute</div>
-<div>
-<br>
-</div>
-<div>$description$ - description in the AssemblyDescription attribute</div>
-<div>
-<br>
-</div>
-<div>$configuration$ - build configuration (debug/release)</div>
-</section>
-<section data-id="208346f5069407b1f917408c50822f7d">
-    <h2>Include/Exclude Files</h2>
-<div>
-<span>&lt;files&gt;</span>
-    <br>
-</div>
-<div>&lt;file src="" target="" exclude="" /&gt;</div>
-<div>&lt;/files&gt;</div>
-<div>
-    <br>
-</div>
-<div>src -&gt; location of files. &nbsp;</div>
-<div>* wildcard is allowed. &nbsp;&nbsp;</div>
-<div>
-<span>** wildcard recursive directory search.</span>
-</div>
-<div>
-<br>
-</div>
-<div>target -&gt; relative path to put files into</div>
-<div>
-<br>
-</div>
-<div>exclude -&gt; file(s) to exclude. &nbsp;</div>
-<div>can contain semi-colon delimited list or file pattern</div>
-<div>can use * and ** wildcards<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="9139dbd3170b1fae1c14ba799b22811f">
-    <h2>Dependencies</h2>
-<div>
-    <br>
-    </div>
-<div>
-<div>&lt;dependencies&gt;</div>
-<div>&nbsp; &lt;dependency id="" version="" /&gt;</div>
-<div>
-<span>&lt;/dependencies&gt;</span>
-    <br>
-</div>
-</div>
-<div>
-    <span>
-        <br>
-    </span>
-</div>
-<div>
-<span>id -&gt; package id</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>version -&gt; package version #</span>
-</div>
-</section>
-<section data-id="073951ad081543ac3b8c5bd05f3cc23a">
-    <h2>Dependencies by Framework</h2>
-<div>
-<div>
-    <br>
-</div>
-<div>&lt;dependencies&gt;&nbsp;</div>
-<div>&nbsp; &nbsp;&lt;group targetFramework=""&gt;</div>
-<div>
-<span>&lt;dependency id="" version="" /&gt;</span>
-</div>
-<div>&nbsp; &nbsp;&lt;/group&gt;</div>
-<div>
-<br>
-</div>
-</div>
-<div>
-<b>targetFramework:</b>
-</div>
-<div>framework to use</div>
-<div>if blank, acts as like the flat file list</div>
-<div>
-<br>
-</div>
-<div>
-<b>Note:</b>
-</div>
-<div>can either use this model or the flat model on the previous slide but not combined.</div>
-</section>
-<section data-id="82dce94399d34cd0f05c0802471dc870">
-    <h2>Assembly References</h2>
-<div>
-    <br>
-    </div>
-<div>
-<div>&lt;references&gt;</div>
-<div>&nbsp; &lt;reference file="xunit.dll" /&gt;</div>
-<div>
-<span>&lt;/references&gt;</span>
-    <br>
-</div>
-</div>
-<div>
-    <span>
-        <br>
-    </span>
-</div>
-<div>
-<span>Assemblies in the lib directory to add to the project reference list.</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>works just like dependencies with either flat list or grouped.</span>
-</div>
-</section>
-<section data-id="6e0a0e5bda4789703bf670404e459943">
-    <h2>Framework Assembly References</h2>
-<div>
-<span>&lt;frameworkAssemblies&gt;</span>
-    <br>
-</div>
-<div>
-<div>&nbsp; &lt;frameworkAssembly&nbsp;</div>
-<div>assemblyName="System.ServiceModel"&nbsp;</div>
-<div>targetFramework="net40" /&gt;</div>
-<div>
-    <br>
-</div>
-<div>&nbsp; &lt;frameworkAssembly&nbsp;</div>
-<div>assemblyName="System.SomethingElse" &nbsp;/&gt;</div>
-<div>&lt;/frameworkAssemblies&gt;</div>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="aa6daafc027ee791b04ea7ed3be26f00">
-    <h2>Common Nuget Pack Options</h2>
-<div>When creating from Visual Studio Project:</div>
-<div>
-    <br>
-</div>
-<div>
-<ul>
-<li>
-<span style="text-align: center;">-IncludeReferencedProjects</span>
-</li>
-<li>
-<span style="text-align: center;">-Prop Configuration=Release</span>
-</li>
-<li>
-<span style="text-align: center;">-Build</span>
-</li>
-</ul>
-</div>
-<span style="text-align: center;">
-    <div>
-        <span>
-            <br>
-        </span>
-        </div>
-<div>
-<span>-OutputDirectory control where the nupkg is saved to.</span>
-        <br>
-</div>
-<div>
-        <span>
-            <br>
-        </span>
-    </div>
-</span>
-<div>
-<br>
-</div>
+				<section data-id="aa6daafc027ee791b04ea7ed3be26f00" class="">
+					<h2>Common Nuget Pack Options</h2>
+					<div>Against Visual Studio Project:</div>
+					<div><ul><li><span style="text-align: center;">-IncludeReferencedProjects</span></li><li><span style="text-align: center;">-Prop Configuration=Release</span></li><li><span style="text-align: center;">-Build</span></li></ul></div>
+					<div><br /></div>
+					<div>-OutputDirectory control where the nupkg is saved to.<br /></div>
+					<div><br /></div>
+					<div><br />&nbsp;</div>
+					<div><br /></div>
+				</section>
+				<section data-id="61d4c63dd4224d72beda74dd038d585a" class="">
+					<h2>Using a GUI to create packages</h2><div><br /></div>
+					<div>Not everyone wants to use the command line to create package.</div>
+					<div><br /></div>
+					<div><br /></div>
+					<div>The&nbsp;<a href="https://npe.codeplex.com/downloads/get/clickOnce/NuGetPackageExplorer.application">Nuget Package Explorer</a>&nbsp;is the GUI use for package creation.</div>
+					<div><br /></div>
+					<div>Install using Chocolatey or <a href="http://npe.codeplex.com/">http://npe.codeplex.com/</a></div>
+					<div><br /></div>
+					<div><br /></div>
+				</section>
+				<section class="" data-id="f35a9479dd924babc4e181bb1f184889">
+					<h2>Questions on Creation Basics?</h2><div><br /></div>
+					<div>Coming Up:</div>
+					<div><br /></div>
+					<div>Updating Configuration Files</div>
+					<div><span><br /></span></div>
+					<div><span>Including Source Code</span><br /></div>
+					<div><br /></div>
+					<div>Powershell Scripts</div>
+				</section>
 
+				<section class="" data-id="9ce041524bdb129ff60f6aa614320b3f">
+					<h2>2 ways to update configs files</h2><div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Include a [filename].transform is xml based like a config file</span><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">or</span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Utilize XDT Transforms with&nbsp;</span></div>
+					<div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">[filename].install.xdt<br /></div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal;">[filename].uninstall.xdt</div>
+					</div>
+				</section>
 
+				<section data-id="ffac2130dec006178ac28981317716f2" class="">
+					<h2>[Filename].transform</h2><div><br /></div>
+					<div>- contains XML that looks like config</div>
+					<div><br /></div>
+					<div>- contains&nbsp;<span>only sections to be merged.</span></div>
+					<div><br /></div>
+					<div>- only adds elements or adds attributes&nbsp;</div>
+					<div><br /></div>
+					<div>- does not change existing elements or attributes</div><div><br /></div><div>- merged elements/attributes are removed on uninstall</div><div><br /></div><div><br /></div><div><br /></div>
+				</section>
+				<section data-id="b2d2290c338236f3f220c43b04bfb068" class="">
+					<h2>[Filename].*.xdt</h2><div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><span style="font-size: 30px; font-style: normal; font-variant: normal;">- utilizes the XDT syntax</span></div>
 
-</section>
-<section data-id="61d4c63dd4224d72beda74dd038d585a">
-    <h2>Using a GUI to create packages</h2>
-<div>
-    <br>
-</div>
-<div>Not everyone wants to use the command line to create package.</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>The&nbsp;<a href="https://npe.codeplex.com/downloads/get/clickOnce/NuGetPackageExplorer.application">Nuget Package Explorer</a>&nbsp;is the GUI use for package creation.</div>
-<div>
-<br>
-</div>
-<div>Install using Chocolatey or <a href="http://npe.codeplex.com/">http://npe.codeplex.com/</a>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="92b7a1b9de7d448edc70fbd297cdf380">
-    <h2>Publishing Packages</h2>
-<div>
-    <br>
-    </div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">nuget setapikey [Api Key]&nbsp;</span>
-    <br>
-</div>
-<div>
-    <span style="font-size: 30px; font-style: normal; font-variant: normal;">
-        <br>
-    </span>
-</div>
-<div>nuget push &lt;package path&gt; [API Key] [options]</div>
-<div>
-<br>
-</div>
-<div>Options:</div>
-<div>
-<ul>
-<li>-Source</li>
-<li>-ApiKey</li>
-<li>-Timeout</li>
-</ul>
-<div style="text-align: left;">
-<br>
-</div>
-</div>
-<div style="text-align: center;">Default source is nuget.org unless specified or DefaultPushSource in NuGet config file is set (%AppData%\Nuget\Nuget.config)</div>
-<div style="text-align: center;">
-<br>
-</div>
-<div style="text-align: center;">
-<br>
-</div>
-</section>
-<section data-id="afb1ee37fdf7559043280ff8150d2835">
-    <h2>Demo&nbsp;</h2>
-<div>
-    <br>
-</div>
-<div>Creating a nuget package from the command line.</div>
-<div>
-<br>
-</div>
-<div>Creating same package using Gui instead.</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-</section>
-<section data-id="ffac2130dec006178ac28981317716f2">
-    <h2>Transforming Config Files&nbsp;</h2>
-<div>
-<span>[filename].transform</span>
-    <br>
-</div>
-<div>
-    <span>
-        <br>
-    </span>
-</div>
-<div>- contains XML that looks like config</div>
-<div>
-<br>
-</div>
-<div>- contains&nbsp;<span>only sections to be merged.</span>
-</div>
-<div>
-<br>
-</div>
-<div>- only adds elements or adds attributes&nbsp;</div>
-<div>
-<br>
-</div>
-<div>- does not change existing elements or attributes</div>
-<div>
-<br>
-</div>
-<div>- merged elements/attributes are removed on uninstall</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="b2d2290c338236f3f220c43b04bfb068">
-    <h2>Support for XDT</h2>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">[filename].install.xdt<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">[filename].uninstall.xdt</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- utilizes the XDT syntax&nbsp;</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- Allows manipulating of the structure instead of just merge</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- xdt:Locator &nbsp;element that you want to change</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- xdt:Transform what to do to the elements</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- Insert, InsertIfMissing, InsertAfter, InsertBefore, SetAttributes</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">- Remove, RemoveAll, RemoveAttributes</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<a href="http://msdn.microsoft.com/en-us/library/dd465326.aspx">http://msdn.microsoft.com/en-us/library/dd465326.aspx</a>
-</div>
-</div>
-</section>
-<section data-id="1b1fa1b4bb3d513a35e8be1c09462584">
-    <h2>Transform Source Code</h2>
-<div>[filename].cs.pp</div>
-<div>
-    <br>
-</div>
-<div>- works somewhat like project templates</div>
-<div>
-<br>
-</div>
-<div>- useful if package includes source code to be added to the project</div>
-<div>
-<br>
-</div>
-<div>- any project property may be replace in .pp file</div>
-<div>
-<br>
-</div>
-<div>- project name surrounded by $&nbsp;</div>
-<div>example:&nbsp;<span>$rootnamespace$</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>
-    <a href="http://msdn.microsoft.com/en-us/library/vslangproj.projectproperties_properties(VS.80).aspx">http://msdn.microsoft.com/en-us/library/vslangproj.projectproperties_properties(VS.80).aspx</a>
-    <br>
-</span>
-</div>
-</section>
-<section data-id="3a899aaab3e83566603af4b57005b5ec">
-    <h2>Powershell Scripts</h2>
-<div>Files should be located in the tools directory</div>
-<div>
-    <br>
-</div>
-<div>Init.ps1</div>
-<div>- run the 1st time package is installed into solution</div>
-<div>- runs every time solution is opened in Visual Studio</div>
-<div>- has to be in root of tools folder else will be ignored</div>
-<div>
-<br>
-</div>
-<div>Install.ps1</div>
-<div>- run each time package is installed into a project</div>
-<div>- must have files in content or lib folders to run</div>
-<div>- runs after Init.ps1</div>
-<div>
-<br>
-</div>
-<div>Uninstall.ps1</div>
-<div>- run each time package is uninstalled or updated&nbsp;</div>
-</section>
-<section data-id="2ea1aec9ea9c4bb523d5d955ca07c02d">
-    <h2>Powershell Scripts Cont.</h2>
-<div>
-<span>Add this line at top of each file:</span>
-    <br>
-</div>
-<div>param($installPath, $toolsPath, $package, $project)<br>
-</div>
-<div>
-    <br>
-</div>
-<div>$installPath - path to the folder where package is installed</div>
-<div>
-<br>
-</div>
-<div>$toolsPath - path to tools directory</div>
-<div>
-<br>
-</div>
-<div>$package - reference to the package object</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>$project -</span>
-<span>&nbsp;reference to EnvDTE project object &nbsp;and&nbsp;</span>
-<span>null in Init.ps1</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>Helper Package to see values: NuGetPsVariables</div>
-<div>- writes above values to log file and then uninstall itself</div>
-</section>
-<section data-id="e7ec32a541d17477ca1e39c4ac4c88ef">
-    <h2>Demo</h2>
-<div>NsGetPsVariables</div>
-<div>
-    <br>
-</div>
-<div>Config / Source Transforms</div>
-<div>
-<br>
-</div>
-<div>
-<span>Install / Uninstall &nbsp;</span>
-<span>Powershell Scripts&nbsp;</span>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>Testing XDT Transforms</div>
-<div>
-<br>
-</div>
-<div>Script to Increment Package Version</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="bf6dd5bd69efc99019d962c6de1569d1">
-    <h2>Hosting Your Own Nuget Feed</h2>
-<div>
-    <br>
-</div>
-<div>Local Feed: point at a folder on your system</div>
-<div>
-<br>
-</div>
-<div>Remote Feeds: &nbsp;You can host a remote feed on a server that runs IIS.</div>
-<div>- use Nuget.Server package</div>
-<div>
-<br>
-</div>
-<div>Can also host nuget gallery locally</div>
-<div>
-<ul>
-<li>
-<a href="https://github.com/NuGet/NuGetGallery/blob/master/README.markdown">Setting up a Local Gallery</a>
-</li>
-<li>
-<a href="http://docs.nuget.org/docs/contribute/branding-the-nuget-gallery">Branding the Nuget Gallery</a>
-</li>
-</ul>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="775378176e2b9702d6096bb96db66305">
-    <h2>Demo&nbsp;</h2>
-<div>
-    <br>
-    </div>
-<div>Creating Remote Feed</div>
-</section>
-<section data-id="dd7e00164db11d7e787a1dd1f9f80ebd">
-    <h2>
-    Other projects using nuget
-</h2>
-<div>
-<br>
-</div>
-<div>Chocolatey - windows package manager</div>
-<div>
-<br>
-</div>
-<div>BoxStarter - use chocolatey. &nbsp;better way to setup new machine</div>
-<div>
-<br>
-</div>
-<div>
-<span>Resharper Extension Manager - uses custom NuGet Gallery&nbsp;</span>
-</div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <br>
-</span>
-</div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">JetBrains TeamCity - consume, create, publish tasks&nbsp;</span>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>MyGet - NuGet server to create/host you own feeds.</div>
-<div>
-<br>
-</div>
-<div>OctopusDeploy - convention-based automated deployment</div>
-<div>
-<br>
-</div>
-<div>SymbolSource - debug packages by downloading symbols/source</div>
-</section>
-<section data-id="b9d29feb53abbab085bb7ed98233db96">
-    <h2>More Information</h2>
-<div>
-<span>Main NuGet Web Site and Package Repository</span>
-</div>
-<div>
-<a href="http://nuget.org/">http://nuget.org/</a>&nbsp;<br>
-</div>
-<div>
-    <br>
-</div>
-<div>
-<span>Documentation</span>
-</div>
-<div>
-<a href="http://docs.nuget.org/">http://docs.nuget.org/</a>&nbsp;<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<span>NuGet Team Blog</span>
-<br>
-</div>
-<div>
-<a href="http://blog.nuget.org/">http://blog.nuget.org/</a>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>Apps Built On Top of Nuget</div>
-<div>
-<a href="http://docs.nuget.org/docs/reference/ecosystem">http://docs.nuget.org/docs/reference/ecosystem</a>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>Twitter Feed of Latest Packages</div>
-<div>
-<a href="https://twitter.com/NuGetLatest">https://twitter.com/NuGetLatest</a>
-</div>
-</section>
-<section data-id="02c4db106c5fd227080e31fceda10b23">
-    <h2>Books</h2>
-<div>
-    <br>
-</div>
-<div>
-    <br>
-</div>
-<div>Pro NuGet (<a href="http://www.amazon.com/Pro-NuGet-Maarten-Balliauw/dp/1430260017/ref=tmm_pap_title_0?ie=UTF8&amp;qid=1393582366&amp;sr=8-1">Amazon Link</a>)</div>
-<div>
-<br>
-</div>
-<div>Nuget 2 Essentials (<a href="http://www.amazon.com/NuGet-2-Essentials-Damir-Arh/dp/178216586X/ref=tmm_pap_title_0?ie=UTF8&amp;qid=1393582366&amp;sr=8-3">Amazon Link</a>)</div>
-</section>
-<section data-id="ebcb860711bf68f71d206fb3b8275560">
-    <h2>Questions?</h2>
-<div style="text-align: center;">
-    <br>
-</div>
-<div style="text-align: center;">Come to my talk on Chocolatey @ 2:15 in room 230</div>
-<div style="text-align: center;">
-    <br>
-</div>
-<div>
-    <div>
-<br>
-</div>
-<div>
-<span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal;">Blog: randomcoder.azurewebsites.net</span>
-<br>
-</div>
-    <div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">Email:&nbsp;digitaldrummerj at gmail.com</div>
-<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
-        Twitter: @digitaldrummerj</div>
-<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="text-align: center; font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><span style="font-size: 30px; font-style: normal; font-variant: normal;">same syntax as web.config.debug/release&nbsp;</span><br /></div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;">- Allows manipulating of the structure instead of just merge</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;">- xdt:Locator &nbsp;element that you want to change</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;">- xdt:Transform what to do to the elements</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;">- Insert, InsertIfMissing, InsertAfter, InsertBefore, SetAttributes</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;">- Remove, RemoveAll, RemoveAttributes</div>
+						                         <div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><a href="http://msdn.microsoft.com/en-us/library/dd465326.aspx">http://msdn.microsoft.com/en-us/library/dd465326.aspx</a></div>
 
-</section>
-<section data-id="74bcf9dfdcf0d2b1b5d1f2d0d532b321">
-    <h2>Backup</h2>
-</section>
-<section data-id="e1e64f22a381e072e6fdbe3cd97532a5">
-    <h2>Installing Packages</h2>
-<div>
-    <br>
-</div>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Solution Explorer:&nbsp;</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>
-<span style="text-align: center;">Right click on project or solution&nbsp;</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Manage Nuget Packages</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Online-&gt; All or specific source</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select for the package you want</span>
-</li>
-<li>
-<span style="text-align: center;">Click Install (</span>
-<span style="text-align: center;">Always installs latest version)</span>
-</li>
-</ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Package Manager Console:</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>Install-Package [Package Name]</li>
-<li>Install-Package [Package Name] -Version [Version #]</li>
-</ul>
-</div>
-</div>
-</section>
-<section data-id="2702681f6252d9c50eb980989d8ef1a7">
-    <h2>Updating Packages</h2>
-<div>
-    <br>
-</div>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Solution Explorer:&nbsp;</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>
-<span style="text-align: center;">Right click on project or solution&nbsp;</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Manage Nuget Packages</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Updates -&gt; All or specific source</span>
-<br>
-</li>
-</ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Package Manager Console:</b>
-</div>
-<div>
-<ul>
-<li>Update-Package [Package Name] -&gt; Specific Package</li>
-<li>Update-Package &nbsp;-&gt; All packages</li>
-</ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<font color="#ff0000">Warning: </font>Update-Package with no parameters will update each package to latest version regardless of dependency version.</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<font color="#ff0000">Warning #2: </font>&nbsp;Update uninstalls previous version before install</div>
-</div>
-</section>
-<section data-id="5048253019f2bb47a03939fab6f001a0">
-    <h2>Uninstall Package</h2>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <b>In Solution Explorer:&nbsp;</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>
-<span style="text-align: center;">Right click on project or solution&nbsp;</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Manage Nuget Packages</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Installed Packages&nbsp;</span>
-<br>
-</li>
-<li>
-<span style="text-align: center;">Select Package to Uninstall</span>
-</li>
-<li>
-<span style="text-align: center;">Click Uninstall</span>
-</li>
-</ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Package Manager Console:</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>Uninstall-Package [Package Name]&nbsp;</li>
-</ul>
-<div style="text-align: left;">
-<br>
-</div>
-<div style="text-align: center;">Note: You can not delete packages that are a dependency to another package</div>
-<div style="text-align: center;">
-<br>
-</div>
-</div>
-</div>
-</section>
-<section data-id="b50472ca408746397b13eaddf52f7a35">
-    <h2>Re-Install Packages</h2>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Best accomplished in the package manager console</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <br>
-    </div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Manage Nuget Packages:&nbsp;</b>
-    <br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <ul>
-        <li>
-<span style="text-align: center;">Would have to uninstall package and then go install package</span>
-        <br>
-</li>
-    </ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<b>In Package Manager Console:</b>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">The -Reinstall switch will uninstall and install package(s) including dependencies.</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<ul>
-<li>Update-Package [Package Name] -Reinstall -&gt; Specific Package</li>
-<li>Update-Package &nbsp;-Reinstall -&gt; All packages</li>
-</ul>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-</div>
-</section>
-<section data-id="fe9a111431f6266edf01777265c73532">
-    <h2>Framework and Profiles</h2>
-<div>
-    <b>Framework:</b>
-</div>
-<div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-<span>.NET Framework -&gt; net</span>
-</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Silverlight -&gt; sl</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">.NET Micro Framework -&gt; netmf</div>
-</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Windows Phone 8 -&gt; windowsphone8</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-<b>Profiles:</b>
-</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-<b>
-<br>
-</b>
-</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Client -&gt; client</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Windows Phone 7 -&gt; wp</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Compact Framework -&gt; cf</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Full -&gt; full</div>
-<div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-</section>
-<section data-id="aaf168fd413c9f483864ca781ee2ffee">
-    <h2>Framework Versions Examples</h2>
-<div>.NET 3.5 -&gt; net35</div>
-<div>.NET 4.0 -&gt; net40</div>
-<div>
-    <br>
-</div>
-<div>.NET 3.5 Client - net35-client</div>
-<div>.NET 4.0 Full -&gt; net40-full</div>
-<div>
-<br>
-</div>
-<div>Silverlight 3 -&gt; sl3</div>
-<div>
-<br>
-</div>
-<div>windows phone 8 -&gt; windowsphone8</div>
-<div>
-<br>
-</div>
-<div>Portable Class Library for Windows Store App &amp; .NET 4.5 -&gt; portable-windows8+net45</div>
-<div>
-<br>
-</div>
-<div>
-<a href="http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#Supporting_Multiple_.NET_Framework_Versions_and_Profiles">Full Docs</a>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="93545078d8d58b798ac0bc974ba56032">
-    <h2>Useful PM Console Switches</h2>
-<div>
-    <span>-ProjectName -&gt; specific projects to take action on</span>
-</div>
-<div>
-<br>
-</div>
-<div>-Version -&gt; version of package to use. &nbsp;default latest</div>
-<div>
-<br>
-</div>
-<div>-WhatIf -&gt; displays the actions that would be taken</div>
-<div>
-<br>
-</div>
-<div>
-<span>-Source -&gt; specifics url or directory path to use</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
-<section data-id="b551a86aa6193b8bc24dacd2778e4e64">
-    <h2>Automate Builds</h2>
-<div>
-    <br>
-    </div>
-<div>
-<span style="font-size: 30px; font-style: normal; font-variant: normal;">Check in nuget.exe to version control</span>
-    <br>
-</div>
-<div>
-    <span style="font-size: 30px; font-style: normal; font-variant: normal;">
-        <br>
-    </span>
-</div>
-<div>Before building any projects run&nbsp;</div>
-<div>
-<span>nuget.exe restore path\to\Solution.sln</span>
-</div>
-<div>
-<span>
-    <br>
-</span>
-</div>
-<div>
-<span>Note: make sure that packages directory&nbsp;</span>
-</div>
-<div>
-<span>is excluded from version control.</span>
-</div>
-</section>
-<section data-id="68ec8e8f89bd3f984226165c040515dd">
-    <h2>Updating nuget</h2>
-<div>
-    <br>
-</div>
-<div>Visual Studio Tools -&gt; Extensions and Updates</div>
-<div>
-<br>
-</div>
-<div>Package Manager Console -&gt; nuget update -self</div>
-</section>
-<section data-id="6dd7d105537c31964d822d9cd35431b8">
-    <h2>What does a nuget package do?</h2>
-<div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-    <br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Includes everything necessary to install a library or tool&nbsp;<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Installs package dependencies</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Can copy files to your solution&nbsp;</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Can add references</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<br>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">Can<span>&nbsp;update app.config / web.config</span>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<span>
-    <br>
-</span>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<span>Can run powershell scripts including in the package</span>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<span>
-    <br>
-</span>
-</div>
-<div style="font-size: 30px; font-style: normal; font-variant: normal;">
-<span>On uninstall, removes files, and reverses changes made in the project</span>
-</div>
-</div>
-</div>
-</section>
-</div>
+					                         </div>
+				</section>
+				<section data-id="1b1fa1b4bb3d513a35e8be1c09462584" class="">
+					<h2>Transform Source Code</h2><div>[filename].cs.pp</div>
+					<div><br /></div>
+					<div>- works somewhat like project templates</div>
+					<div><br /></div>
+					<div><span>- any project property may be replace in .pp file</span><br /></div>
+					<div><br /></div>
+					<div>- property name surrounded by $&nbsp;</div>
+					<div>example:&nbsp;<span>$rootnamespace$</span></div>
+					<div><span><br /></span></div>
+					<div><span><a href="http://msdn.microsoft.com/en-us/library/vslangproj.projectproperties_properties(VS.80).aspx">http://msdn.microsoft.com/en-us/library/vslangproj.projectproperties_properties(VS.80).aspx</a><br /></span></div>
+				</section>
+				<section data-id="3a899aaab3e83566603af4b57005b5ec" class="">
+					<h2>Powershell Scripts</h2><div>Files should be located in the tools directory</div>
+					<div><br /></div>
+					<div class="fragment" data-fragment-index="0">
+						Init.ps1
+						<div>- run the 1st time package is installed into solution</div>
+						<div>- runs every time solution is opened in Visual Studio</div>
+						<div>- has to be in root of tools folder else will be ignored</div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="1">
+						Install.ps1
+						<div>- run each time package is installed into a project</div>
+						<div>- must have files in content or lib folders to run</div>
+						<div>- runs after Init.ps1</div>
+						<br />
+					</div>
+					<div class="fragment" data-fragment-index="2">
+						Uninstall.ps1
+						<div>- run each time package is uninstalled or updated&nbsp;</div>
 
-            <!-- End Any section element inside of this container is displayed as a slide -->
+					</div>
+				</section>
+				<section data-id="2ea1aec9ea9c4bb523d5d955ca07c02d" class="">
+					<h2>Powershell Scripts Cont.</h2><div><span>Add this line at top of each file:</span><br /></div>
+					<div>param($installPath, $toolsPath, $package, $project)<br /></div>
+					<div><br /></div>
+					<div>$installPath - path to the folder where package is installed</div>
+					<div><br /></div>
+					<div>$toolsPath - path to tools directory</div>
+					<div><br /></div>
+					<div>$package - reference to the package object</div>
+					<div><span><br /></span></div>
+					<div><span>$project -</span><span>&nbsp;reference to EnvDTE project object &nbsp;and&nbsp;</span><span>null in Init.ps1</span></div>
+					<div><span><br /></span></div>
+					<div>Helper Package to see values: NuGetPsVariables</div>
+					<div>- writes above values to log file and then uninstall itself</div>
+				</section>
+				<section data-id="e7ec32a541d17477ca1e39c4ac4c88ef" class="">
+					<h2>Demo</h2><div>
+						             <div style="font-size: 30px; font-style: normal; font-variant: normal;">Creating a nuget package from the command line.</div>
+						             <div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div>
+						             <div style="font-size: 30px; font-style: normal; font-variant: normal;">Creating same package using Gui instead.</div>
+					             </div>
+					<div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div>
+					<div><span>Config / Source Transforms</span><br /></div>
+					<div><br /></div>
+					<div><span>Install / Uninstall &nbsp;</span><span>Powershell Scripts&nbsp;</span><br /></div>
+					<div><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Testing XDT Transforms</span><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div>
+					<div>Script to Increment Package Version</div>
+					<div><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">NuGetPsVariables</span></div>
+				</section>
+				<section data-id="bf6dd5bd69efc99019d962c6de1569d1" class="">
+					<h2>Hosting Your Own Nuget Feed</h2><div><br /></div>
+					<div>Local Feed: point at a folder on your system</div>
+					<div><br /></div>
+					<div>Remote Feeds: &nbsp;You can host a remote feed on a server that runs IIS.</div>
+					<div><br /></div>
+					<div><br /></div>
+					<div>Can also host nuget gallery locally</div>
+					<div><ul><li><a href="https://github.com/NuGet/NuGetGallery/blob/master/README.markdown">Setting up a Local Gallery</a></li><li><a href="http://docs.nuget.org/docs/contribute/branding-the-nuget-gallery">Branding the Nuget Gallery</a></li></ul></div>
+					<div><br /></div>
+				</section>
+				<section class="" data-id="0828dd35fc331f9ba3218f2e5f62bf22">
+					<h2>Tell Everyone about the Feed</h2><div>Create a Nuget.Config file</div>
+					<div><br /></div>
+					<div>Defines nuget configuration includes sources.</div>
+					<div><br /></div>
+					<div>Loads from the default location</div>
+					<div>then loads any file named NuGet.config &nbsp;<span>starting&nbsp;</span></div>
+					<div><span>from the &nbsp;</span><span>root of the current drive&nbsp;</span></div>
+					<div>and ending in the current directory.<br /></div>
+					<div><br /></div>
+					<div><span>Default Location: %AppData%\Nuget\Nuget.Config</span><br /></div>
+					<div><br /></div>
+					<div>Docs: <a href="http://docs.nuget.org/docs/reference/nuget-config-file">docs.nuget.org/docs/reference/nuget-config-file</a></div>
+				</section>
+				<section data-id="775378176e2b9702d6096bb96db66305" class="">
+					<h2>Demo&nbsp;</h2><div><br /></div>
+					<div>Creating Remote Feed</div>
+					<div><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Adding new package source&nbsp;</span><br /></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Nuget.config overview</span></div>
+				</section>
+				<section data-id="68ec8e8f89bd3f984226165c040515dd" class="">
+					<h2>Updating nuget</h2><div><br /></div>
+					<div>Visual Studio Tools -&gt; Extensions and Updates</div>
+					<div><br /></div>
+					<div>Command Line -&gt; nuget update -self</div>
+				</section>
+				<section class="" data-id="94bf2e1c5829c143c1a1fab5a24e82f5">
+					<h2>Nuget vNext (aka 3.0)&nbsp;</h2><div>Totally redesigned UI</div>
+					<div><br /></div>
+					<div><ul><li class="fragment" data-fragment-index="0"><span style="text-align: center;">Consolidated installed/online/updates views together</span></li><li class="fragment" data-fragment-index="1"><span style="text-align: center;">Version selection for installs/updates within UI</span></li><li class="fragment" data-fragment-index="2"><span style="text-align: center;">WhatIf available in the UI</span></li><li class="fragment" data-fragment-index="3"><span style="text-align: center;">Control over dependency version selection</span></li><li class="fragment" data-fragment-index="4"><span style="text-align: center;">Open for multiple projects at once</span></li><li class="fragment" data-fragment-index="5"><span style="text-align: center;">Ability to leave UI open</span></li></ul></div>
+					<div><br /></div>
+					<div class="fragment" data-fragment-index="6"><a href="http://blog.nuget.org/20141014/in-the-platform.html">http://blog.nuget.org/20141014/in-the-platform.html</a><br /></div>
+				</section>
+				<section class="" data-id="2a7476457bd1f4d928c00f2308e59c32">
+					<h2>UI Preview</h2><div><br /></div>
+					<div class="absolute-element" style="height: 626px; left: 2px; max-height: none; max-width: none; position: absolute; top: 60px; width: 929px; z-index: 4;"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/digitaldrummerj/images/738041/Nuget3UI.png" style="height: 576.402162162162px; max-height: none; max-width: none; width: 942px;"><br /></div>
+				</section>
+				<section data-id="dd7e00164db11d7e787a1dd1f9f80ebd" class="">
+					<h2>
+						Other projects using nuget
+					</h2><div><br /></div>
+					<div>Chocolatey - windows package manager</div>
+					<div><br /></div>
+					<div>BoxStarter - uses chocolatey. &nbsp;better way to setup new machine</div>
+					<div><br /></div>
+					<div><span>Resharper Extension Manager - uses custom NuGet Gallery&nbsp;</span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div>
+					<div><span style="font-size: 30px; font-style: normal; font-variant: normal;">JetBrains TeamCity - consume, create, publish tasks&nbsp;</span><br /></div>
+					<div><br /></div>
+					<div>MyGet - NuGet server to create/host you own feeds.</div>
+					<div><br /></div>
+					<div>OctopusDeploy - convention-based automated deployment</div>
+					<div><br /></div>
+					<div>SymbolSource - debug packages by downloading symbols/source</div>
+
+				</section>
+				<section data-id="b9d29feb53abbab085bb7ed98233db96" class="">
+					<h2>More Information</h2><div><span>Main NuGet Web Site and Package Repository</span></div>
+					<div><a href="http://nuget.org/">http://nuget.org/</a>&nbsp;<br /></div>
+					<div><br /></div>
+					<div><span>Documentation</span></div>
+					<div><a href="http://docs.nuget.org/">http://docs.nuget.org/</a>&nbsp;<br /></div>
+					<div><br /></div>
+					<div><span>NuGet Team Blog</span><br /></div>
+					<div><a href="http://blog.nuget.org/">http://blog.nuget.org/</a><br /></div>
+					<div><br /></div>
+					<div>Apps Built On Top of Nuget</div>
+					<div><a href="http://docs.nuget.org/docs/reference/ecosystem">http://docs.nuget.org/docs/reference/ecosystem</a><br /></div>
+					<div><br /></div>
+					<div>Twitter Feed of Latest Packages</div>
+					<div><a href="https://twitter.com/NuGetLatest">https://twitter.com/NuGetLatest</a></div>
+				</section>
+				<section data-id="02c4db106c5fd227080e31fceda10b23" class="">
+					<h2>Books</h2><div><br /></div>
+					<div><br /></div>
+					<div>Pro NuGet (<a href="http://www.amazon.com/Pro-NuGet-Maarten-Balliauw/dp/1430260017/ref=tmm_pap_title_0?ie=UTF8&amp;qid=1393582366&amp;sr=8-1">Amazon Link</a>)</div>
+					<div><br /></div>
+					<div>Nuget 2 Essentials (<a href="http://www.amazon.com/NuGet-2-Essentials-Damir-Arh/dp/178216586X/ref=tmm_pap_title_0?ie=UTF8&amp;qid=1393582366&amp;sr=8-3">Amazon Link</a>)</div>
+				</section>
+				<section data-id="ebcb860711bf68f71d206fb3b8275560" class="">
+					<h2>Questions?</h2><div style="text-align: center;"><br /></div>
+					<div>
+						<div><span style="font-size: 29.798601150512695px; font-style: normal; font-variant: normal;">Blog: digitaldrummerj.azurewebsites.net</span><br /></div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;"><br /></div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">Email:&nbsp;digitaldrummerj at gmail.com</div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;"><br /></div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">
+							Twitter: @digitaldrummerj
+						</div>
+
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;"><br /></div>
+						<div style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">
+							Slides: http://www.slides.com/digitaldrummerj
+						</div>
+
+					</div>
+
+				</section>
+				<section data-id="74bcf9dfdcf0d2b1b5d1f2d0d532b321" class=""><h2>Backup</h2></section><section data-id="919024f10dd0b78506e7176902fc673d" class=""><h2>3 ways to play with packages</h2><div><span><b>For Whole Solution:</b></span></div><div>Tools -&gt;&nbsp;<span>Nuget Package Manager -&gt;&nbsp;</span><span>Manage Nuget Packages for Solution</span></div><div><br /></div><div><b><br /></b></div><div><b>For Project:</b></div><div>In Solution Explorer -&gt;&nbsp;<span>Right-click on project -&gt; select Manage Nuget Packages</span></div><div><br /></div><div><br /></div><div><b>Powershell Based</b></div><div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Tools -&gt;&nbsp;<span>Nuget Package Manager -&gt;&nbsp;</span><span>Package Manager Console</span></div></div></section><section data-id="0bcec886b0721272222a3204e47052ca" class=""><h2>Getting Help</h2><div><br /></div><div><span style="font-size: 30px; font-style: normal; font-variant: normal;">All of nuget's documentation:&nbsp;</span><a href="http://docs.nuget.org/" style="font-size: 30px; font-style: normal; font-variant: normal;">http://docs.nuget.org/</a><br /></div><div><br /></div><div><b style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Package Manager Command Help</b><br /></div><div><b style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><br /></b></div><div>get-help nuget -&gt; gets available nuget commands</div><div><br /></div><div>get-help [nuget command] -&gt; get specific command help</div><div><br /></div><div>common help parameters:</div><div><ul><li><span style="text-align: center;">-examples&nbsp;</span></li><li><span style="text-align: center;">-detailed</span></li><li><span style="text-align: center;">-full</span></li><li><span style="text-align: center;">-online&nbsp;</span></li></ul></div></section><section data-id="e1e64f22a381e072e6fdbe3cd97532a5" class=""><h2>Installing Packages</h2><div><br /></div><div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Solution Explorer:&nbsp;</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li><span style="text-align: center;">Right click on project or solution&nbsp;</span><br /></li><li><span style="text-align: center;">Select Manage Nuget Packages</span><br /></li><li><span style="text-align: center;">Select Online-&gt; All or specific source</span><br /></li><li><span style="text-align: center;">Select for the package you want</span></li><li><span style="text-align: center;">Click Install (</span><span style="text-align: center;">Always installs latest version)</span></li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Package Manager Console:</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li>Install-Package [Package Name]</li><li>Install-Package [Package Name] -Version [Version #]</li></ul></div></div></section><section data-id="2b440356836906fc99b27e903aca4184" class=""><h2>Common Commands</h2><div>Manage Nuget Packages for Solution&nbsp;</div><div><ul><li><span style="text-align: center;">List / Search</span></li><li><span style="text-align: center;">Install&nbsp;</span><br /></li><li><span style="text-align: center;">Update&nbsp;</span></li><li><span style="text-align: center;">Uninstall</span></li></ul></div><div><br /></div><div>PM Console Commands&nbsp;</div><div><ul><li><span style="text-align: center;">Install-Package&nbsp;</span></li><li><span style="text-align: center;">Update-Package&nbsp;</span></li><li><span style="text-align: center;">Uninstall-Package</span></li><li><span style="text-align: center;">Get-Package</span><br /></li></ul></div><div><br /></div></section><section data-id="2702681f6252d9c50eb980989d8ef1a7" class=""><h2>Updating Packages</h2><div><br /></div><div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Solution Explorer:&nbsp;</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li><span style="text-align: center;">Right click on project or solution&nbsp;</span><br /></li><li><span style="text-align: center;">Select Manage Nuget Packages</span><br /></li><li><span style="text-align: center;">Select Updates -&gt; All or specific source</span><br /></li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Package Manager Console:</b></div><div><ul><li>Update-Package [Package Name] -&gt; Specific Package</li><li>Update-Package &nbsp;-&gt; All packages</li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><font color="#ff0000">Warning: </font>Update-Package with no parameters will update each package to latest version regardless of dependency version.</div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><font color="#ff0000">Warning #2: </font>&nbsp;Update uninstalls previous version before install</div></div></section><section data-id="5048253019f2bb47a03939fab6f001a0" class=""><h2>Uninstall Package</h2><div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Solution Explorer:&nbsp;</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li><span style="text-align: center;">Right click on project or solution&nbsp;</span><br /></li><li><span style="text-align: center;">Select Manage Nuget Packages</span><br /></li><li><span style="text-align: center;">Select Installed Packages&nbsp;</span><br /></li><li><span style="text-align: center;">Select Package to Uninstall</span></li><li><span style="text-align: center;">Click Uninstall</span></li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Package Manager Console:</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li>Uninstall-Package [Package Name]&nbsp;</li></ul><div style="text-align: left;"><br /></div><div style="text-align: center;">Note: You can not delete packages that are a dependency to another package</div><div style="text-align: center;"><br /></div></div></div></section><section data-id="b50472ca408746397b13eaddf52f7a35" class=""><h2>Re-Install Packages</h2><div><div style="font-size: 30px; font-style: normal; font-variant: normal;">Best accomplished in the package manager console</div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Manage Nuget Packages:&nbsp;</b><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li><span style="text-align: center;">Would have to uninstall package and then go install package</span><br /></li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>In Package Manager Console:</b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;">The -Reinstall switch will uninstall and install package(s) including dependencies.</div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><ul><li>Update-Package [Package Name] -Reinstall -&gt; Specific Package</li><li>Update-Package &nbsp;-Reinstall -&gt; All packages</li></ul></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></div></div></section><section data-id="fe9a111431f6266edf01777265c73532" class=""><h2>Framework and Profiles</h2><div><b>Framework:</b></div><div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><span>.NET Framework -&gt; net</span></div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Silverlight -&gt; sl</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">.NET Micro Framework -&gt; netmf</div></div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Windows Phone 8 -&gt; windowsphone8</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><br /></div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><b>Profiles:</b></div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><b><br /></b></div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Client -&gt; client</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Windows Phone 7 -&gt; wp</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Compact Framework -&gt; cf</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;">Full -&gt; full</div><div style="font-size: 29.872270584106445px; font-style: normal; font-variant: normal;"><br /></div></section><section data-id="aaf168fd413c9f483864ca781ee2ffee" class=""><h2>Framework Versions Examples</h2><div>.NET 3.5 -&gt; net35</div><div>.NET 4.0 -&gt; net40</div><div><br /></div><div>.NET 3.5 Client - net35-client</div><div>.NET 4.0 Full -&gt; net40-full</div><div><br /></div><div>Silverlight 3 -&gt; sl3</div><div><br /></div><div>windows phone 8 -&gt; windowsphone8</div><div><br /></div><div>Portable Class Library for Windows Store App &amp; .NET 4.5 -&gt; portable-windows8+net45</div><div><br /></div><div><a href="http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#Supporting_Multiple_.NET_Framework_Versions_and_Profiles">Full Docs</a></div><div><br /></div></section><section data-id="93545078d8d58b798ac0bc974ba56032" class=""><h2>Useful PM Console Switches</h2><div><span>-ProjectName -&gt; specific projects to take action on</span></div><div><br /></div><div>-Version -&gt; version of package to use. &nbsp;default latest</div><div><br /></div><div>-WhatIf -&gt; displays the actions that would be taken</div><div><br /></div><div><span>-Source -&gt; specifics url or directory path to use</span></div><div><span><br /></span></div><div><br /></div><div><br /></div><div><br /></div><div><br /></div></section><section data-id="92b7a1b9de7d448edc70fbd297cdf380" class=""><h2>Publishing Packages</h2><div><br /></div><div><span style="font-size: 30px; font-style: normal; font-variant: normal;">nuget setapikey [Api Key]&nbsp;</span><br /></div><div><span style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></span></div><div>nuget push &lt;package path&gt; [API Key] [options]</div><div><br /></div><div>Options:</div><div><ul><li>-Source</li><li>-ApiKey</li><li>-Timeout</li></ul><div style="text-align: left;"><br /></div></div><div style="text-align: center;">Default source is nuget.org unless specified or DefaultPushSource in NuGet config file is set (%AppData%\Nuget\Nuget.config)</div><div style="text-align: center;"><br /></div><div style="text-align: center;"><br /></div></section><section class="" data-id="b497480544477ebba5b1efca5514d7a0"><h2>Hosting Remote Feed in Azure&nbsp;</h2><div><br /></div><div><a href="http://suchan.cz/2014/10/how-to-deploy-your-own-nuget-server-on-azure-website-in-15-minutes/">http://suchan.cz/2014/10/how-to-deploy-your-own-nuget-server-on-azure-website-in-15-minutes/</a><br /></div><div><br /></div><div>or&nbsp;</div><div><br /></div><div><a href="http://bit.ly/11K6vMG">http://bit.ly/11K6vMG</a><br /></div><div><br /></div></section><section data-id="208346f5069407b1f917408c50822f7d" class=""><h2>Include/Exclude Files</h2><div><span>&lt;files&gt;</span><br /></div><div>&lt;file src="" target="" exclude="" /&gt;</div><div>&lt;/files&gt;</div><div><br /></div><div>src -&gt; location of files. &nbsp;</div><div>* wildcard is allowed. &nbsp;&nbsp;</div><div><span>** wildcard recursive directory search.</span></div><div><br /></div><div>target -&gt; relative path to put files into</div><div><br /></div><div>exclude -&gt; file(s) to exclude. &nbsp;</div><div>can contain semi-colon delimited list or file pattern</div><div>can use * and ** wildcards<br /></div><div><br /></div></section><section data-id="9139dbd3170b1fae1c14ba799b22811f" class=""><h2>Dependencies</h2><div><br /></div><div><div>&lt;dependencies&gt;</div><div>&nbsp; &lt;dependency id="" version="" /&gt;</div><div><span>&lt;/dependencies&gt;</span><br /></div></div><div><span><br /></span></div><div><span>id -&gt; package id</span></div><div><span>version -&gt; package version&nbsp;</span></div><div><span><br /></span></div><div>Can be grouped by Framework by putting in&nbsp;<br /><ul><li><span style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">&lt;group targetFramework=""&gt;&lt;/group&gt;</span></li><li><span style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">if framework blank, acts as like the flat file list</span></li></ul><div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b><br /></b></div><div style="font-size: 30px; font-style: normal; font-variant: normal;"><b>Note: </b>can&nbsp;either be grouped&nbsp;<span style="font-size: 30px; font-style: normal; font-variant: normal;">or &nbsp;flat but not mixed.</span></div></div></div></section><section data-id="82dce94399d34cd0f05c0802471dc870" class=""><h2>Assembly References</h2><div><span>&lt;references&gt;</span><br /></div><div><div>&nbsp; &lt;reference file="xunit.dll" /&gt;</div><div><span>&lt;/references&gt;</span><br /></div></div><div><span><br /></span></div><div><span>Assemblies in the lib directory to add to the project reference list.</span></div><div><span><br /></span></div><div><span>works just like dependencies with either flat list or grouped.</span></div><div><span><br /></span></div><div><span style="font-size: 30px; font-style: normal; font-variant: normal;">Can be grouped by Framework by putting in&nbsp;</span><br /><ul style="font-size: 30px; font-style: normal; font-variant: normal;"><li><span style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">&lt;group targetFramework=""&gt;&lt;/group&gt;</span></li><li><span style="font-size: 30px; font-style: normal; font-variant: normal; text-align: center;">if framework blank, acts as like the flat file list</span></li></ul><div><b style="font-size: 30px; font-style: normal; font-variant: normal;"><br /></b></div><div><b style="font-size: 30px; font-style: normal; font-variant: normal;">Note:&nbsp;</b><span style="font-size: 30px; font-style: normal; font-variant: normal;">can&nbsp;</span><span style="font-size: 30px; font-style: normal; font-variant: normal;">either be grouped&nbsp;</span><span style="font-size: 30px; font-style: normal; font-variant: normal;">or &nbsp;flat but not mixed.</span><br /></div></div></section><section data-id="6e0a0e5bda4789703bf670404e459943" class=""><h2>Framework Assembly References</h2><div><span>You can also reference Framework assemblies that are installed in the GAC</span></div><div><span><br /></span></div><div><span>&lt;frameworkAssemblies&gt;</span><br /></div><div><div>&nbsp; &lt;frameworkAssembly&nbsp;<span>assemblyName="System.ServiceModel"&nbsp;</span></div><div>targetFramework="net40" /&gt;</div><div>&nbsp; &lt;frameworkAssembly&nbsp;<span>assemblyName="System.SomethingElse" &nbsp;/&gt;</span></div><div>&lt;/frameworkAssemblies&gt;</div></div><div><br /></div><div><br /></div><div>Can specify multiple frameworks by separating by comma</div><div><br /></div><div>if left blank, always add</div><div><br /></div></section>
+			</div>
+			<!-- End Any section element inside of this container is displayed as a slide -->
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
 		<script>
 
 			// Full list of configuration options available here:
@@ -1671,8 +909,8 @@ Demo</h2>
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
@@ -1680,6 +918,5 @@ Demo</h2>
 			});
 
 		</script>
-
 	</body>
 </html>

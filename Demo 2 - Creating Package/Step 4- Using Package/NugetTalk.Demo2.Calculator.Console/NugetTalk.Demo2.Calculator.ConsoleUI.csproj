@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NugetTalk.Demo2.Calculator">
-      <HintPath>..\packages\NugetTalk.Demo2.Calculator.1.1.0.0\lib\net20\NugetTalk.Demo2.Calculator.dll</HintPath>
+      <HintPath>..\packages\NugetTalk.Demo2.Calculator.1.1.5428.33652\lib\net20\NugetTalk.Demo2.Calculator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

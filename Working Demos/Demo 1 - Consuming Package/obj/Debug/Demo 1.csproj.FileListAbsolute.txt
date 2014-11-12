@@ -1,0 +1,14 @@
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Demo 1.exe.config
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Demo 1.exe
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Demo 1.pdb
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.dll
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.Log4Net1211.dll
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\log4net.dll
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\log4net.xml
+C:\projects\NugetTalk\Demo 1 - Consuming Package\obj\Debug\Demo 1.exe
+C:\projects\NugetTalk\Demo 1 - Consuming Package\obj\Debug\Demo 1.pdb
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.pdb
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.xml
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.Log4Net1211.pdb
+C:\projects\NugetTalk\Demo 1 - Consuming Package\bin\Debug\Common.Logging.Log4Net1211.xml
+C:\projects\NugetTalk\Demo 1 - Consuming Package\obj\Debug\Demo 1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Demo 3 - RemoteFeeds.dll.config
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Demo 3 - RemoteFeeds.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Demo 3 - RemoteFeeds.pdb
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Elmah.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Microsoft.Web.Infrastructure.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Microsoft.Web.XmlTransform.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Ninject.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\NuGet.Core.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\NuGet.Server.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\RouteMagic.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\WebActivatorEx.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Ninject.pdb
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\bin\Ninject.xml
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\obj\Debug\Demo 3 - RemoteFeeds.csprojResolveAssemblyReference.cache
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\obj\Debug\Demo 3 - RemoteFeeds.dll
+C:\projects\NugetTalk\Demo 3 - Remote Feeds\Demo 3 - RemoteFeeds\obj\Debug\Demo 3 - RemoteFeeds.pdb

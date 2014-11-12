@@ -1,0 +1,7 @@
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe.config
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.Console.pdb
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.ConsoleUI.csprojResolveAssemblyReference.cache
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.exe
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 4- Using Package\NugetTalk.Demo2.Calculator.Console\obj\Debug\NugetTalk.Demo2.Calculator.Console.pdb

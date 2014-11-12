@@ -1,0 +1,9 @@
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\Log4NetNugetConsoleAppenderSample.exe.config
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\obj\Debug\Log4NetNugetConsoleAppenderSample.csprojResolveAssemblyReference.cache
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\Log4net.config
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\Log4NetNugetConsoleAppenderSample.exe
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\Log4NetNugetConsoleAppenderSample.pdb
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\log4net.dll
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\bin\Debug\log4net.xml
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\obj\Debug\Log4NetNugetConsoleAppenderSample.exe
+C:\projects\NugetTalk\Demo 4 - Updating Config Files\Log4netNugetConsoleAppenderSample\obj\Debug\Log4NetNugetConsoleAppenderSample.pdb

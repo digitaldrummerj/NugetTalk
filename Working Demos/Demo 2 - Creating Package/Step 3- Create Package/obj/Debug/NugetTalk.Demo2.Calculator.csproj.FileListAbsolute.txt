@@ -1,0 +1,5 @@
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 3- Create Package\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 3- Create Package\bin\Debug\NugetTalk.Demo2.Calculator.pdb
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 3- Create Package\obj\Debug\NugetTalk.Demo2.Calculator.csprojResolveAssemblyReference.cache
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 3- Create Package\obj\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 3- Create Package\obj\Debug\NugetTalk.Demo2.Calculator.pdb

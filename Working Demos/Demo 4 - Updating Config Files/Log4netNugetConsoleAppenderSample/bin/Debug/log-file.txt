@@ -1,0 +1,2 @@
+2014-11-11 19:18:15,454 [10] ERROR Log4NetNugetConsoleAppenderSample.Program [(null)] - Test Error
+2014-11-11 19:48:16,990 [10] ERROR Log4NetNugetConsoleAppenderSample.Program [(null)] - Test Error

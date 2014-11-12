@@ -1,0 +1,4 @@
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.Calculator\bin\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.Calculator\bin\Debug\NugetTalk.Demo2.Calculator.pdb
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.Calculator\obj\Debug\NugetTalk.Demo2.Calculator.dll
+C:\projects\NugetTalk\Demo 2 - Creating Package\Step 2 - Move Logic to Library and Create WinForm App\NugetTalk.Demo2.Calculator\obj\Debug\NugetTalk.Demo2.Calculator.pdb
