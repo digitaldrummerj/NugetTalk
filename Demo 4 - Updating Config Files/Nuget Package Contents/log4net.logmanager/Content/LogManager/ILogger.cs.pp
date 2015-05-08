@@ -34,5 +34,14 @@ namespace $rootnamespace$
 		void FatalFormat(string format, params object[] args);
 		void FatalFormat(string format, object arg0);
 		void FatalFormat(IFormatProvider provider, string format, params object[] args);
+		
+		void LogMessage(LogLevel logLevel, string message);
+
+		void LogMessage(LogLevel logLevel, string message, Exception exception);
+
+		void LogMessageFormat(LogLevel logLevel, IFormatProvider provider,string format, params object[] args);
+
+		void LogMessageFormat(LogLevel logLevel, string format, params object[] args);
+
 	}
 }
